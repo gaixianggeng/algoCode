@@ -7,6 +7,7 @@ using namespace std;
 
 
 int engthOfLongestSubstring(string);
+int longestCommonPrefix(vector<string>);
 
 int main()
 {
@@ -40,5 +41,10 @@ int engthOfLongestSubstring(string s) {
 	}
 
 	return endIndex - startIndex > longest ? endIndex - startIndex : longest;
+
+}
+
+//最长公共前缀
+int longestCommonPreix(vector<string>& strs){
 
 }
