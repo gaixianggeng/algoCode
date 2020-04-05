@@ -7,14 +7,19 @@ using namespace std;
 
 
 int engthOfLongestSubstring(string);
-int longestCommonPrefix(vector<string>);
+string longestCommonPrefix(vector<string>);
 
 int main()
 {
-	string s = "ytuwrqjjkljk";
+	/*string s = "ytuwrqjjkljk";
 	int 	longest = engthOfLongestSubstring(s);
-	cout << "test" << endl;
 	cout << longest << endl;
+	*/
+	vector<string> strs = { "test","tes01","test02" };
+	
+	string commomStr = longestCommonPrefix(strs);
+	cout << commomStr << endl;
+	
 	return 0;
 }
 
@@ -45,8 +50,15 @@ int engthOfLongestSubstring(string s) {
 }
 
 //最长公共前缀
-int longestCommonPreix(vector<string>& strs){
+string longestCommonPreix(vector<string>& strs){
 
+	string commStr = "";
+	for (int i = 0; i < strs[0].size(); i++)
+	{
+		if (strs[0][i] == strs[1][i]){
+			commStr += strs[0][i];
+		}
+	}
+
+	return commStr;
 }
-
-ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC0aLjO7Kz8ZXK5SxcROURbcvTC6awo2/7pncNdUyxwSCi58elGX5faNmExZ4qOmpSaEJw8VGsN4uLJ7QCe8ad24U8XAVdGssHchgN1/c5rhB5nfJrY2t8uh8vlOC9be6gcn+Rij/WL+MNhIDbRm013qpsZUnJwgeIYzvWHiE+vyzRzCASy7geHMzs+I8G/tt8VcD1Q26sddx/8QWYmvKsNmSHoKdGYGjJmbjBts92qOMEfUlJOXVERawglQYcFjl18ZUXfkkDJiErDsiP0yP89YKVE8GZm7BkatrztQrSkAuMaTfMwDpL/Iz0GYDB/aa4A2oMreMn7w82LAleg6va7 gai@linux
