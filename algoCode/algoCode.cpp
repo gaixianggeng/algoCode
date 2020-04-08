@@ -7,7 +7,8 @@ using namespace std;
 
 
 int engthOfLongestSubstring(string);
-string longestCommonPrefix(vector<string>);
+string longestCommonPrefix(vector<string>&);
+int trap(vector<int>&);
 
 int main()
 {
@@ -15,10 +16,12 @@ int main()
 	int 	longest = engthOfLongestSubstring(s);
 	cout << longest << endl;
 	*/
-	vector<string> strs = { "test","tes01","test02" };
-	
-	string commomStr = longestCommonPrefix(strs);
-	cout << commomStr << endl;
+	//vector<string> strs = { "test","tes01","test02" };
+	//
+	//string commomStr = longestCommonPrefix(strs);
+	//cout << commomStr << endl;
+
+
 	
 	return 0;
 }
@@ -61,4 +64,10 @@ string longestCommonPreix(vector<string>& strs){
 	}
 
 	return commStr;
+}
+
+
+//接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
+int trap(vector<int>& height) {
+
 }
