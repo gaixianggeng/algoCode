@@ -2,13 +2,13 @@
 //
 
 #include "algoCode.h"
-
+#include <vector>
 using namespace std;
 
 
 int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
-int trap(vector<int>&);
+//int trap(vector<int>&);
 
 int main()
 {
@@ -16,13 +16,12 @@ int main()
 	int 	longest = engthOfLongestSubstring(s);
 	cout << longest << endl;
 	*/
-	//vector<string> strs = { "test","tes01","test02" };
-	//
-	//string commomStr = longestCommonPrefix(strs);
-	//cout << commomStr << endl;
+	vector<string> strs = { "test","tes01","t" };
+	string commomStr = longestCommonPrefix(strs);
+	cout << commomStr << endl;
 
 
-	
+
 	return 0;
 }
 
@@ -35,12 +34,12 @@ int engthOfLongestSubstring(string s) {
 
 	map<char, int>subMap;
 
-	for (int i=0;i< s.size();i++)
+	for (int i = 0; i < s.size(); i++)
 	{
 		//已经存入数据
 		if (subMap.count(s[i]) > 0 && subMap[s[i]] >= startIndex) {
 			longest = endIndex - startIndex > longest ? endIndex - startIndex : longest;
-			startIndex = subMap[s[i]]+1;
+			startIndex = subMap[s[i]] + 1;
 		}
 		endIndex++;
 		subMap[s[i]] = i;
@@ -53,21 +52,37 @@ int engthOfLongestSubstring(string s) {
 }
 
 //最长公共前缀
-string longestCommonPreix(vector<string>& strs){
-
-	string commStr = "";
-	for (int i = 0; i < strs[0].size(); i++)
-	{
-		if (strs[0][i] == strs[1][i]){
-			commStr += strs[0][i];
-		}
+string longestCommonPrefix(vector<string>& strs) {
+	if (strs.size() == 0) {
+		return "";
 	}
 
-	return commStr;
+	string commStr = strs[0];
+
+	int n = commStr.size();
+	for (int i = 1; i < strs.size(); i++) {
+		if (strs[i].substr(0, n) == commStr) {
+			continue;
+		}
+		else
+		{
+			while (strs[i].substr(0, n) != commStr.substr(0, n))
+			{
+				n--;
+
+			}
+		}
+
+	}
+
+
+	return commStr.substr(0, n);
 }
 
 
-//接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
-int trap(vector<int>& height) {
-
-}
+////接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
+//int trap(vector<int>& height) {
+//	return 0;
+//
+//
+//}
