@@ -8,6 +8,7 @@ using namespace std;
 
 int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
+vector<int> twoSum(vector<int>&, int);
 //int trap(vector<int>&);
 
 int main()
@@ -20,10 +21,36 @@ int main()
 	string commomStr = longestCommonPrefix(strs);
 	cout << commomStr << endl;
 
+	vector<int> nums = { 2,3,7,0 };
+	vector<int> res = twoSum(nums, 9);
+	for (int i = res.size() - 1; i >= 0; i--)
+	{
+		cout << res[i] << endl;
+	}
 
 
 	return 0;
 }
+//leetcode 1 两数之和
+vector<int> twoSum(vector<int>& nums, int target) {
+	vector<int> indexList;
+	if (nums.size() == 0) {
+		return indexList;
+	}
+	map<int, int> sum;
+	for (int i = 0; i <= nums.size(); i++)
+	{
+		if (sum.count(nums[i]) != 0) {
+			indexList.push_back(i);
+			indexList.push_back(sum[nums[i]]);
+			break;
+		}
+
+		sum[target - nums[i]] = i;
+	}
+	return indexList;
+}
+
 
 //leetcode 3 无重复字符的最长子串
 int engthOfLongestSubstring(string s) {
