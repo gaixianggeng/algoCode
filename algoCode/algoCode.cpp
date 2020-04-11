@@ -10,6 +10,7 @@ int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
 //int trap(vector<int>&);
+bool checkInclusion(string,string);
 
 int main()
 {
@@ -17,16 +18,20 @@ int main()
 	int 	longest = engthOfLongestSubstring(s);
 	cout << longest << endl;
 	*/
-	vector<string> strs = { "test","tes01","t" };
-	string commomStr = longestCommonPrefix(strs);
-	cout << commomStr << endl;
+//	vector<string> strs = { "test","tes01","t" };
+//	string commomStr = longestCommonPrefix(strs);
+//	cout << commomStr << endl;
 
-	vector<int> nums = { 2,3,7,0 };
-	vector<int> res = twoSum(nums, 9);
-	for (int i = res.size() - 1; i >= 0; i--)
-	{
-		cout << res[i] << endl;
-	}
+//	vector<int> nums = { 2,3,7,0 };
+//	vector<int> res = twoSum(nums, 9);
+//	for (int i = res.size() - 1; i >= 0; i--)
+//	{
+//		cout << res[i] << endl;
+//	}
+
+	string s1 = "ab";
+	string s2 = "yubsebaoj";
+	checkInclusion(s1,s2);
 
 
 	return 0;
@@ -116,3 +121,11 @@ string longestCommonPrefix(vector<string>& strs) {
 //
 //
 //}
+
+
+//字符串的排列
+bool checkInclusion(string s1,string s2){
+	cout<<s1<<endl;
+	cout<<s2<<endl;
+
+} 
