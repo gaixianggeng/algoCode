@@ -53,6 +53,8 @@ vector<int> twoSum(vector<int>& nums, int target) {
 
 
 //leetcode 3 无重复字符的最长子串
+//建一个map存储每个字符，endIndex累加
+//如key存在的话 跟新longest startIndex同时加一
 int engthOfLongestSubstring(string s) {
 
 	int longest = 0;
@@ -79,6 +81,7 @@ int engthOfLongestSubstring(string s) {
 }
 
 //最长公共前缀
+//取前两个的最长公共前缀 之后将取得的前缀依次跟后面的比较
 string longestCommonPrefix(vector<string>& strs) {
 	if (strs.size() == 0) {
 		return "";
