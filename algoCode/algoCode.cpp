@@ -9,7 +9,7 @@ using namespace std;
 int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
-//int trap(vector<int>&);
+int trap(vector<int>&);
 bool checkInclusion(string, string);
 
 int main()
@@ -29,13 +29,16 @@ int main()
 	//		cout << res[i] << endl;
 	//	}
 
-	string s1 = "acb";
-	string s2 = "dcda";
+	//string s1 = "acb";
+	//string s2 = "dcda";
 
-	bool isExists = checkInclusion(s1, s2);
-	cout << boolalpha << isExists << endl;
+	//bool isExists = checkInclusion(s1, s2);
+	//cout << boolalpha << isExists << endl;
 
 
+	vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	int sum = trap(height);
+	cout << sum << endl;
 	return 0;
 }
 //leetcode 1 两数之和
@@ -117,12 +120,45 @@ string longestCommonPrefix(vector<string>& strs) {
 }
 
 
-////接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
-//int trap(vector<int>& height) {
-//	return 0;
-//
-//
-//}
+//接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
+//按列求
+int trap(vector<int>& height) {
+	int sum = 0;
+
+	for (int i = 0; i < height.size(); i++)
+	{
+		int current = height[i];
+		int leftHeight = 0;
+		int rightHeight = 0;
+
+
+		//获取当前数字的左右最大值
+		for (int n = 0; n < height.size(); n++)
+		{
+			if (n < i) {
+				if (height[n] > leftHeight) {
+					leftHeight = height[n];
+				}
+
+			}
+			else if (n > i) {
+				if (height[n] > rightHeight) {
+					rightHeight = height[n];
+				}
+			}
+
+		}
+		cout << leftHeight << ":" << current << ":" << rightHeight << endl;
+		if (leftHeight > current && rightHeight > current) {
+			sum += leftHeight > rightHeight ? rightHeight - current : leftHeight - current;
+		}
+		cout << sum << "-----" << endl;
+	}
+
+	return sum;
+
+
+}
 
 
 //字符串的排列
@@ -150,6 +186,6 @@ bool checkInclusion(string s1, string s2) {
 		}
 		m2[s2[i]]++;
 	}
-	
-	return m1==m2?true: false;
+
+	return m1 == m2 ? true : false;
 }
