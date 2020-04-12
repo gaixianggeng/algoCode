@@ -10,7 +10,7 @@ int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
 //int trap(vector<int>&);
-bool checkInclusion(string,string);
+bool checkInclusion(string, string);
 
 int main()
 {
@@ -18,20 +18,22 @@ int main()
 	int 	longest = engthOfLongestSubstring(s);
 	cout << longest << endl;
 	*/
-//	vector<string> strs = { "test","tes01","t" };
-//	string commomStr = longestCommonPrefix(strs);
-//	cout << commomStr << endl;
+	//	vector<string> strs = { "test","tes01","t" };
+	//	string commomStr = longestCommonPrefix(strs);
+	//	cout << commomStr << endl;
 
-//	vector<int> nums = { 2,3,7,0 };
-//	vector<int> res = twoSum(nums, 9);
-//	for (int i = res.size() - 1; i >= 0; i--)
-//	{
-//		cout << res[i] << endl;
-//	}
+	//	vector<int> nums = { 2,3,7,0 };
+	//	vector<int> res = twoSum(nums, 9);
+	//	for (int i = res.size() - 1; i >= 0; i--)
+	//	{
+	//		cout << res[i] << endl;
+	//	}
 
-	string s1 = "ab";
-	string s2 = "yubsebaoj";
-	checkInclusion(s1,s2);
+	string s1 = "acb";
+	string s2 = "dcda";
+
+	bool isExists = checkInclusion(s1, s2);
+	cout << boolalpha << isExists << endl;
 
 
 	return 0;
@@ -124,8 +126,30 @@ string longestCommonPrefix(vector<string>& strs) {
 
 
 //字符串的排列
-bool checkInclusion(string s1,string s2){
-	cout<<s1<<endl;
-	cout<<s2<<endl;
+bool checkInclusion(string s1, string s2) {
 
-} 
+	if (s1.size() > s2.size()) {
+		return false;
+	}
+	map<char, int>m1;
+	map<char, int>m2;
+	for (int i = 0; i < s1.size(); i++)
+	{
+		m1[s1[i]]++;
+		m2[s2[i]]++;
+	}
+
+	for (int i = s1.size(); i < s2.size(); i++) {
+		if (m1 == m2) {
+			return true;
+		}
+		int n = i - s1.size();
+		m2[s2[n]]--;
+		if (m2[s2[n]] == 0) {
+			m2.erase(s2[n]);
+		}
+		m2[s2[i]]++;
+	}
+	
+	return m1==m2?true: false;
+}
