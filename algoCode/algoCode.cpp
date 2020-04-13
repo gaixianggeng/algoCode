@@ -2,15 +2,14 @@
 //
 
 #include "algoCode.h"
-#include <vector>
 using namespace std;
 
 
+int trap(vector<int>&);
 int engthOfLongestSubstring(string);
+bool checkInclusion(string, string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
-int trap(vector<int>&);
-bool checkInclusion(string, string);
 
 int main()
 {
