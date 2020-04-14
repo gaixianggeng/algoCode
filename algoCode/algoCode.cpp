@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-
+string multiply(string,string);
 int engthOfLongestSubstring(string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
@@ -189,3 +189,9 @@ bool checkInclusion(string s1, string s2) {
 
 	return m1 == m2 ? true : false;
 }
+//字符串相乘
+string multuply(string num1,string num2)
+{
+
+}
+
