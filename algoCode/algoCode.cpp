@@ -15,9 +15,9 @@ bool checkInclusion(string, string);
 int main()
 {
 	/*string s = "ytuwrqjjkljk";
-	int 	longest = engthOfLongestSubstring(s);
-	cout << longest << endl;
-	*/
+	  int	longest = engthOfLongestSubstring(s);
+	  cout << longest << endl;
+	  */
 	//	vector<string> strs = { "test","tes01","t" };
 	//	string commomStr = longestCommonPrefix(strs);
 	//	cout << commomStr << endl;
@@ -36,9 +36,14 @@ int main()
 	//cout << boolalpha << isExists << endl;
 
 
-	vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
-	int sum = trap(height);
-	cout << sum << endl;
+	//	vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	//	int sum = trap(height);
+	//	cout << sum << endl;
+
+	string num1 = "23";
+	string num2 = "10";
+	string sum=multiply(num1,num2);
+	cout<<sum<<endl;
 	return 0;
 }
 //leetcode 1 两数之和
