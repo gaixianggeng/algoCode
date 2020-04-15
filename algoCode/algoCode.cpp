@@ -40,8 +40,8 @@ int main()
 	//	int sum = trap(height);
 	//	cout << sum << endl;
 
-	string num1 = "23";
-	string num2 = "10";
+	string num1 = "9865";
+	string num2 = "3561";
 	string sum=multiply(num1,num2);
 	cout<<sum<<endl;
 	return 0;
@@ -195,8 +195,40 @@ bool checkInclusion(string s1, string s2) {
 	return m1 == m2 ? true : false;
 }
 //字符串相乘
-string multuply(string num1,string num2)
+string multiply(string num1,string num2)
 {
+	cout<<num2<<endl;
+	cout<<num1<<endl;
+	int len1 = num1.size();
+	int len2 = num2.size();
+
+	int* sumArray = new int[len2+len1];
+
+	for (int i = len1-1; i>=0; i--) {
+		for (int n = len2 -1; n>=0; n--) {
+			int temp = (num1[i]-'0')*(num2[n]-'0');
+			//cout<<temp<<endl;
+			int index = n+i+1;
+			//cout<<index<<endl;
+			sumArray[index]+=temp;
+		}
+	}
+	for (int m = len1+len2-1; m >=0;m--) {
+		if (sumArray[m]>=10){
+			cout<<sumArray[m]/10<<endl;
+			cout<<sumArray[m-1]<<endl;
+			sumArray[m-1] += sumArray[m]/10;
+			sumArray[m] = sumArray[m]%10;
+			cout<<sumArray[m-1]<<endl;
+		}
+	}
+	string res="";
+	for (int m = 0; m <len1+len2;m++){
+		char c = &(sumArray[m])+'0';
+		res= res+string(c);
+	}
+	return "";
+
 
 }
 
