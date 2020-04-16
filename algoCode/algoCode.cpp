@@ -10,7 +10,7 @@ int engthOfLongestSubstring(string);
 bool checkInclusion(string, string);
 string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
-
+string multiply(string, string );
 int main()
 {
 	/*string s = "ytuwrqjjkljk";
@@ -35,8 +35,13 @@ int main()
 	//cout << boolalpha << isExists << endl;
 
 
-	vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
-	int sum = trap(height);
+	//vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	//int sum = trap(height);
+	//cout << sum << endl;
+
+	string num1 = "100";
+	string num2 = "100";
+	string sum =multiply(num1, num2);
 	cout << sum << endl;
 	return 0;
 }
@@ -187,4 +192,46 @@ bool checkInclusion(string s1, string s2) {
 	}
 
 	return m1 == m2 ? true : false;
+}
+
+
+//字符串相乘
+string multiply(string num1, string num2) {
+	if (num1 == "0" || num2 == "0") {
+		return "0";
+	}
+	int len1 = num1.size();
+	int len2 = num2.size();
+	int length = len1 + len2;
+
+	vector<int> sumArray(length, 0);
+
+	for (int i = len1 - 1; i >= 0; i--) {
+		for (int n = len2 - 1; n >= 0; n--) {
+			int temp = (num1[i] - '0') * (num2[n] - '0');
+			//cout<<temp<<endl;
+			int index = n + i + 1;
+			sumArray[index] += temp;
+			if (sumArray[index] >= 10) {
+				int b = index - 1;
+				sumArray[b] += sumArray[index] / 10;
+				sumArray[index] = sumArray[index] % 10;
+			}
+		}
+	}
+
+	string res = "";
+	bool isStart = true;
+	for (int val : sumArray)
+	{
+		if (val == 0 && isStart) {
+			continue;
+		}
+		if (val != 0) {
+			isStart = false;
+		}
+		res += (val + '0');
+
+	}
+	return res;
 }
