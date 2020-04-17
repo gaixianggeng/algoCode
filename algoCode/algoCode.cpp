@@ -12,6 +12,9 @@ string longestCommonPrefix(vector<string>&);
 vector<int> twoSum(vector<int>&, int);
 string multiply(string, string);
 string reverseWords(string);
+string simplifyPath(string);
+
+
 int main()
 {
 	/*string s = "ytuwrqjjkljk";
@@ -288,6 +291,16 @@ string reverseWords(string s) {
 		}
 
 	}
+
 	return res;
 
 }
+
+//jianhualujing
+string simplifyPath(string path) {
+
+	return "";
+
+}
+
+
