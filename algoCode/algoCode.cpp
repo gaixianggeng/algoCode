@@ -18,41 +18,44 @@ string simplifyPath(string);
 int main()
 {
 	/*string s = "ytuwrqjjkljk";
-	int 	longest = engthOfLongestSubstring(s);
-	cout << longest << endl;
-	*/
-	//	vector<string> strs = { "test","tes01","t" };
-	//	string commomStr = longestCommonPrefix(strs);
-	//	cout << commomStr << endl;
+	  int	longest = engthOfLongestSubstring(s);
+	  cout << longest << endl;
+	  */
+	  //	vector<string> strs = { "test","tes01","t" };
+	  //	string commomStr = longestCommonPrefix(strs);
+	  //	cout << commomStr << endl;
 
-	//	vector<int> nums = { 2,3,7,0 };
-	//	vector<int> res = twoSum(nums, 9);
-	//	for (int i = res.size() - 1; i >= 0; i--)
-	//	{
-	//		cout << res[i] << endl;
-	//	}
+	  //	vector<int> nums = { 2,3,7,0 };
+	  //	vector<int> res = twoSum(nums, 9);
+	  //	for (int i = res.size() - 1; i >= 0; i--)
+	  //	{
+	  //		cout << res[i] << endl;
+	  //	}
 
-	//string s1 = "acb";
-	//string s2 = "dcda";
+	  //string s1 = "acb";
+	  //string s2 = "dcda";
 
-	//bool isExists = checkInclusion(s1, s2);
-	//cout << boolalpha << isExists << endl;
-
-
-	//vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
-	//int sum = trap(height);
-	//cout << sum << endl;
-
-	//string num1 = "100";
-	//string num2 = "100";
-	//string sum =multiply(num1, num2);
-	//cout << sum << endl;
-
-	string str = "we are the    world!";
-	string s = reverseWords(str);
-	cout << s << endl;
+	  //bool isExists = checkInclusion(s1, s2);
+	  //cout << boolalpha << isExists << endl;
 
 
+	  //vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	  //int sum = trap(height);
+	  //cout << sum << endl;
+
+	  //string num1 = "100";
+	  //string num2 = "100";
+	  //string sum =multiply(num1, num2);
+	  //cout << sum << endl;
+
+	  //string str = "we are the    world!";
+	  //string s = reverseWords(str);
+	  //cout << s << endl;
+
+
+	string	path = "/home/a//../";
+	string sPath = simplifyPath(path);
+	cout << sPath << endl;
 	return 0;
 }
 //leetcode 1 两数之和
@@ -296,10 +299,46 @@ string reverseWords(string s) {
 
 }
 
-//jianhualujing
+//简化路径 直接字符串分割 拼接字符串 
 string simplifyPath(string path) {
+	string sub = "/";
+	vector<string> pathList;
+	int pos1 = path.find(sub);
+	int pos2 = 0;
+	while (string::npos != pos1) {
+		int t = pos1 - pos2;
+		string c = path.substr(pos2, t);
+		if (c == ".." && pathList.size() >= 1) {
+			pathList.pop_back();
+		}
+		else if (c != "" && c != "." && c != "..") {
+			pathList.push_back(c);
+		}
+		pos2 = pos1 + sub.size();
+		pos1 = path.find(sub, pos2);
+	}
+	if (pos2 != path.size()) {
+		string c = path.substr(pos2);
+		if (c == ".." && pathList.size() >= 1) {
+			pathList.pop_back();
+		}
+		else if (c != "" && c != "." && c != "..") {
+			pathList.push_back(c);
+		}
 
-	return "";
+	}
+	string fPath = "/";
+	for (int i = 0; i < pathList.size(); i++)
+	{
+		if (i == pathList.size() - 1) {
+			fPath += pathList[i];
+		}
+		else
+		{
+			fPath += pathList[i] + "/";
+		}
+	}
+	return fPath;
 
 }
 
