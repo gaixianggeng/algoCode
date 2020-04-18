@@ -13,7 +13,7 @@ vector<int> twoSum(vector<int>&, int);
 string multiply(string, string);
 string reverseWords(string);
 string simplifyPath(string);
-
+vector<string> restoreIpAddresses(string);
 
 int main()
 {
@@ -53,9 +53,15 @@ int main()
 	  //cout << s << endl;
 
 
-	string	path = "/home/a//../";
-	string sPath = simplifyPath(path);
-	cout << sPath << endl;
+	//string	path = "/home/a//../";
+	//string sPath = simplifyPath(path);
+	//cout << sPath << endl;
+	string ipStr = "1234";
+	vector<string> ipList = restoreIpAddresses(ipStr);
+	for each (string ip in ipList)
+	{
+		cout << ip << endl;
+	}
 	return 0;
 }
 //leetcode 1 两数之和
@@ -342,4 +348,49 @@ string simplifyPath(string path) {
 
 }
 
+//93 复原ip地址
+vector<string> restoreIpAddresses(string s) {
+	s = "010010";
+	cout << s << endl;
+	vector<string> ipList;
+	if (s.size() > 12 || s.size() < 4) {
+		return ipList;
+	}
+	for (int i = 1; i <= 3; i++)
+	{
+		for (int j = i + 1; j <= i + 3; j++)
+		{
+			for (int m = j + 1; m <= j + 3; m++)
+			{
+				if (j >= s.size() || m >= s.size()) {
+					continue;
+				}
+				string a = s.substr(0, i);
+				string b = s.substr(i, j - i);
+				string c = s.substr(j, m - j);
+				string d = s.substr(m);
+				if (a.size() <= 3 && b.size() <= 3 && c.size() <= 3 && d.size() <= 3) {
+					int an = stoi(a);
+					int bn = stoi(b);
+					int cn = stoi(c);
+					int dn = stoi(d);
+					if (an <= 255 && bn <= 255 && cn <= 255 && dn <= 255) {
+						if ((an > 0 && a[0] == '0') || (bn > 0 && b[0] == '0') || (cn > 0 && c[0] == '0') || (dn > 0 && d[0] == '0')) {
+							continue;
+						}
+						if ((an == 0 && a.size() >1) || (bn == 0 && b.size()>1) || (cn == 0 && c.size()>1) || (dn == 0 && d.size()>1)) {
+							continue;
+						}
+						string ip = a + "." + b + "." + c + "." + d;
+						ipList.push_back(ip);
+
+					}
+
+				}
+			}
+
+		}
+	}
+	return ipList;
+}
 
