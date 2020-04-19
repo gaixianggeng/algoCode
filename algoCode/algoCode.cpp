@@ -15,6 +15,10 @@ string reverseWords(string);
 string simplifyPath(string);
 vector<string> restoreIpAddresses(string);
 vector<vector<int>> threeSum(vector<int>&);
+int maxAreaOfIsland(vector<vector<int>>&);
+int dfs(vector<vector<int>>&, int, int, int, int);
+
+
 
 int main()
 {
@@ -67,17 +71,22 @@ int main()
 	  //}
 
 	  //vector<int> nums = { -1,0,1,2,-1,-4};
-	vector<int> nums = { -2,0,1,1,1,1,2 };
-	vector<vector<int>> sumList = threeSum(nums);
-	for each (vector<int> value in sumList)
-	{
-		for each (int val in value)
-		{
-			cout << val;
-		}
-		cout << endl;
-	}
+	//vector<int> nums = { -2,0,1,1,1,1,2 };
+	//vector<vector<int>> sumList = threeSum(nums);
+	//for each (vector<int> value in sumList)
+	//{
+	//	for each (int val in value)
+	//	{
+	//		cout << val;
+	//	}
+	//	cout << endl;
+	//}
+
+	vector<vector<int>> grid = { {1, 0, 1}, { 1, 1, 0 } };
+	int maxArea = maxAreaOfIsland(grid);
+	cout << maxArea << endl;
 	return 0;
+
 }
 //leetcode 1 两数之和
 vector<int> twoSum(vector<int>& nums, int target) {
@@ -411,6 +420,7 @@ vector<string> restoreIpAddresses(string s) {
 
 
 //15三数之和
+//两数之和的思路套在这里 需要去重  所以采用左右标尺方式
 vector<vector<int>> threeSum(vector<int>& nums) {
 	vector<vector<int>> sumList;
 
@@ -460,28 +470,39 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 	return sumList;
 }
 
-vector<vector<int>> athreeSum(vector<int>& nums) {
-	int target;
-	vector<vector<int>> ans;
-	sort(nums.begin(), nums.end());
-	for (int i = 0; i < nums.size(); i++) {
-		if (i > 0 && nums[i] == nums[i - 1]) continue;
-		if ((target = nums[i]) > 0) break;
-		int l = i + 1, r = nums.size() - 1;
-		while (l < r) {
-			if (nums[l] + nums[r] + target < 0) ++l;
-			else if (nums[l] + nums[r] + target > 0) --r;
-			else {
-				cout << l << r << endl;
-				ans.push_back({ target, nums[l], nums[r] });
-				++l, --r;
-				while (l < r && nums[l] == nums[l - 1]) ++l;
-				while (l < r && nums[r] == nums[r + 1]) --r;
+//695 岛屿最大面积
+
+int maxAreaOfIsland(vector<vector<int>>& grid) {
+	int m = grid.size();
+	int n = grid[0].size();
+	int maxArea = 0;
+
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++) {
+			if (grid[i][j] == 1) {
+				cout << i << j <<m<<n<< endl;
+				int count = dfs(grid, m, n, j, i);
+				cout << count << endl;
+				maxArea = max(count, maxArea);
+
 			}
 		}
 	}
-	return ans;
+	return maxArea;
 }
 
+int dfs(vector<vector<int>>& grid, int m, int n, int j, int i) {
+	if (j >= n || i >= m || i < 0 || j < 0 || grid[i][j] != 1 ) {
+		return 0;
+	}
+	int count = 1;
+	grid[i][j] = 2;
+	count += dfs(grid, m, n, j + 1, i);
+	count += dfs(grid, m, n, j - 1, i);
+	count += dfs(grid, m, n, j, i + 1);
+	count += dfs(grid, m, n, j , i - 1);
+	return count;
+}
 
 
