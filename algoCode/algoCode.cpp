@@ -14,6 +14,7 @@ string multiply(string, string);
 string reverseWords(string);
 string simplifyPath(string);
 vector<string> restoreIpAddresses(string);
+vector<vector<int>> threeSum(vector<int>&);
 
 int main()
 {
@@ -53,14 +54,28 @@ int main()
 	  //cout << s << endl;
 
 
-	//string	path = "/home/a//../";
-	//string sPath = simplifyPath(path);
-	//cout << sPath << endl;
-	string ipStr = "1234";
-	vector<string> ipList = restoreIpAddresses(ipStr);
-	for each (string ip in ipList)
+	  //string	path = "/home/a//../";
+	  //string sPath = simplifyPath(path);
+	  //cout << sPath << endl;
+
+
+	  //string ipStr = "1234";
+	  //vector<string> ipList = restoreIpAddresses(ipStr);
+	  //for each (string ip in ipList)
+	  //{
+	  //	cout << ip << endl;
+	  //}
+
+	  //vector<int> nums = { -1,0,1,2,-1,-4};
+	vector<int> nums = { -2,0,1,1,1,1,2 };
+	vector<vector<int>> sumList = threeSum(nums);
+	for each (vector<int> value in sumList)
 	{
-		cout << ip << endl;
+		for each (int val in value)
+		{
+			cout << val;
+		}
+		cout << endl;
 	}
 	return 0;
 }
@@ -305,7 +320,7 @@ string reverseWords(string s) {
 
 }
 
-//简化路径 直接字符串分割 拼接字符串 
+//简化路径 直接字符串分割 拼接字符串
 string simplifyPath(string path) {
 	string sub = "/";
 	vector<string> pathList;
@@ -378,7 +393,7 @@ vector<string> restoreIpAddresses(string s) {
 						if ((an > 0 && a[0] == '0') || (bn > 0 && b[0] == '0') || (cn > 0 && c[0] == '0') || (dn > 0 && d[0] == '0')) {
 							continue;
 						}
-						if ((an == 0 && a.size() >1) || (bn == 0 && b.size()>1) || (cn == 0 && c.size()>1) || (dn == 0 && d.size()>1)) {
+						if ((an == 0 && a.size() > 1) || (bn == 0 && b.size() > 1) || (cn == 0 && c.size() > 1) || (dn == 0 && d.size() > 1)) {
 							continue;
 						}
 						string ip = a + "." + b + "." + c + "." + d;
@@ -393,4 +408,80 @@ vector<string> restoreIpAddresses(string s) {
 	}
 	return ipList;
 }
+
+
+//15三数之和
+vector<vector<int>> threeSum(vector<int>& nums) {
+	vector<vector<int>> sumList;
+
+	sort(nums.begin(), nums.end());
+	for each (int val in nums)
+	{
+		cout << val;
+
+	}
+	cout << endl;
+	for (int i = 0; i < nums.size(); i++) {
+		if (i > 0 && nums[i] == nums[i - 1]) {
+			continue;
+		}
+		int target = nums[i];
+
+		if (target > 0) {
+			break;
+		}
+		int l = i + 1;
+		int r = nums.size() - 1;
+
+		while (l < r) {
+			int t = target + nums[l] + nums[r];
+			if (t > 0) {
+				--r;
+			}
+			else if (t < 0) {
+				++l;
+			}
+			else {
+				vector<int> a = { nums[l],nums[r],target };
+				sumList.push_back(a);
+				--r;
+				++l;
+				while (l < r && nums[l] == nums[l - 1]) {
+					++l;
+				}
+				while (l < r && nums[r] == nums[r + 1]) {
+					--r;
+				}
+			}
+
+		}
+	}
+
+	return sumList;
+}
+
+vector<vector<int>> athreeSum(vector<int>& nums) {
+	int target;
+	vector<vector<int>> ans;
+	sort(nums.begin(), nums.end());
+	for (int i = 0; i < nums.size(); i++) {
+		if (i > 0 && nums[i] == nums[i - 1]) continue;
+		if ((target = nums[i]) > 0) break;
+		int l = i + 1, r = nums.size() - 1;
+		while (l < r) {
+			if (nums[l] + nums[r] + target < 0) ++l;
+			else if (nums[l] + nums[r] + target > 0) --r;
+			else {
+				cout << l << r << endl;
+				ans.push_back({ target, nums[l], nums[r] });
+				++l, --r;
+				while (l < r && nums[l] == nums[l - 1]) ++l;
+				while (l < r && nums[r] == nums[r + 1]) --r;
+			}
+		}
+	}
+	return ans;
+}
+
+
 
