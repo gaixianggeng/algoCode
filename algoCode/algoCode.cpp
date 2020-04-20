@@ -17,7 +17,7 @@ vector<string> restoreIpAddresses(string);
 vector<vector<int>> threeSum(vector<int>&);
 int maxAreaOfIsland(vector<vector<int>>&);
 int dfs(vector<vector<int>>&, int, int, int, int);
-
+int search(vector<int>&, int);
 
 
 int main()
@@ -82,9 +82,12 @@ int main()
 	//	cout << endl;
 	//}
 
-	vector<vector<int>> grid = { {1, 0, 1}, { 1, 1, 0 } };
-	int maxArea = maxAreaOfIsland(grid);
-	cout << maxArea << endl;
+	//vector<vector<int>> grid = { {1, 0, 1}, { 1, 1, 0 } };
+	//int maxArea = maxAreaOfIsland(grid);
+	//cout << maxArea << endl;
+	vector<int> nums = { 4,5,6,7,0,1,2 };
+	int index = search(nums, 0);
+	cout << index << endl;
 	return 0;
 
 }
@@ -471,7 +474,6 @@ vector<vector<int>> threeSum(vector<int>& nums) {
 }
 
 //695 岛屿最大面积
-
 int maxAreaOfIsland(vector<vector<int>>& grid) {
 	int m = grid.size();
 	int n = grid[0].size();
@@ -481,7 +483,7 @@ int maxAreaOfIsland(vector<vector<int>>& grid) {
 	{
 		for (int j = 0; j < n; j++) {
 			if (grid[i][j] == 1) {
-				cout << i << j <<m<<n<< endl;
+				cout << i << j << m << n << endl;
 				int count = dfs(grid, m, n, j, i);
 				cout << count << endl;
 				maxArea = max(count, maxArea);
@@ -493,7 +495,7 @@ int maxAreaOfIsland(vector<vector<int>>& grid) {
 }
 
 int dfs(vector<vector<int>>& grid, int m, int n, int j, int i) {
-	if (j >= n || i >= m || i < 0 || j < 0 || grid[i][j] != 1 ) {
+	if (j >= n || i >= m || i < 0 || j < 0 || grid[i][j] != 1) {
 		return 0;
 	}
 	int count = 1;
@@ -501,8 +503,54 @@ int dfs(vector<vector<int>>& grid, int m, int n, int j, int i) {
 	count += dfs(grid, m, n, j + 1, i);
 	count += dfs(grid, m, n, j - 1, i);
 	count += dfs(grid, m, n, j, i + 1);
-	count += dfs(grid, m, n, j , i - 1);
+	count += dfs(grid, m, n, j, i - 1);
 	return count;
 }
 
+int search(vector<int>& nums, int target) {
+	target = 3;
+	nums = { 1,3 };
+	for each (int val in nums)
+	{
+		cout << val;
+	}
+	cout << endl;
+	if (nums.size() == 0) {
+		return -1;
+	}
+	int l = 0;
+	int r = nums.size() - 1;
+	while (l <= r)
+	{
+		int m =( r+l )/ 2;
+		if (target == nums[m]) {
+			return m;
+		}
+		if (nums[m] < nums[r]) {
+			if (nums[m] <= target && target <= nums[r]) {
+				l = m + 1;
+			}
+			else 
+			{
+				r = m - 1;
+			}
 
+		}
+		else 
+		{
+			if (target >= nums[l] && target <= nums[m]) {
+				r = m - 1;
+
+			}
+			else
+			{
+				l = m + 1;
+			}
+
+		}
+
+	}
+	return -1;
+
+
+}
