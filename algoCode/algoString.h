@@ -26,4 +26,5 @@ vector<vector<int>> threeSum(vector<int>&);
 int maxAreaOfIsland(vector<vector<int>>&);
 int dfs(vector<vector<int>>&, int, int, int, int);
 int search(vector<int>&, int);
+void quickSort(vector<int>&,int,int);
 

@@ -73,9 +73,26 @@ int main()
 	//vector<vector<int>> grid = { {1, 0, 1}, { 1, 1, 0 } };
 	//int maxArea = maxAreaOfIsland(grid);
 	//cout << maxArea << endl;
-	vector<int> nums = { 4,5,6,7,0,1,2 };
-	int index = search(nums, 0);
-	cout << index << endl;
+	//
+	//vector<int> nums = { 4,5,6,7,0,1,2 };
+	//int index = search(nums, 0);
+	//cout << index << endl;
+
+
+	//快排
+	vector<int> nums = { 5,7,9,23,4,5,8,1,0 };
+	for each (int val in nums)
+	{
+		cout << val <<" ";
+	}
+	cout << endl;
+	quickSort(nums,0,nums.size()-1);
+	for each (int val in nums)
+	{
+		cout << val <<" ";
+	}
+	cout << endl;
+
 	return 0;
 
 }
