@@ -525,7 +525,7 @@ void quickSoort(vector<int>& nums, int s, int e)
 	quickSort(nums, i + 1, e);
 
 }
-
+//快排 网上答案
 void quickSort(vector<int>& arr, int left, int right)
 {
 	if (left >= right)
@@ -552,4 +552,45 @@ void quickSort(vector<int>& arr, int left, int right)
 	arr[i] = base;
 	quickSort(arr, left, i - 1);//递归左边
 	quickSort(arr, i + 1, right);//递归右边
+}
+
+//获取第k大数据
+int	quickSortK(vector<int>& nums, int k) {
+
+	position(nums,0,nums.size()-1);
+		
+	return k;
+}
+
+//快速排序
+void position(vector<int>& arr, int left, int right) {
+	if (left >=right){
+		return;
+	}
+	int s = left;
+	int e = right;
+	int temp = arr[left];
+	while (s<e)
+	{
+		while (arr[e]>=temp && s<e)
+		{
+			e--;
+		}
+		while (arr[s]<=temp &&s<e)
+		{
+			s++;
+		}
+		if (s<=e) {
+			swap(arr[s], arr[e]);
+		}
+	}
+	swap(arr[left],arr[s]);
+	for each (int val in arr)
+	{
+		cout << val << " ";
+	}
+	cout << endl;
+	position(arr,0, s - 1);
+	position(arr,e+1, right);
+	
 }

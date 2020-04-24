@@ -80,13 +80,17 @@ int main()
 
 
 	//快排
-	vector<int> nums = { 5,7,9,23,4,5,8,1,0 };
+	vector<int> nums = {6,1,0,3,4,9,7,5,8,2};
 	for each (int val in nums)
 	{
 		cout << val <<" ";
 	}
 	cout << endl;
-	quickSort(nums,0,nums.size()-1);
+	int i = 0;
+	cout << i << endl;
+	//quickSort(nums,0,nums.size()-1);
+	int n = quickSortK(nums,i);
+	cout << n << endl;
 	for each (int val in nums)
 	{
 		cout << val <<" ";
