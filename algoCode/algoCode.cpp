@@ -80,7 +80,7 @@ int main()
 
 
 	//快排
-	vector<int> nums = {6,1,0,3,4,9,7,5,8,2};
+	vector<int> nums = {3,4,5,7,9,9,7,5,3,1,0,2,1};
 	for each (int val in nums)
 	{
 		cout << val <<" ";

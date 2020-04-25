@@ -580,11 +580,12 @@ void position(vector<int>& arr, int left, int right) {
 		{
 			s++;
 		}
-		if (s<=e) {
+		if (s<e) {
 			swap(arr[s], arr[e]);
 		}
 	}
-	swap(arr[left],arr[s]);
+	swap(arr[left],arr[e]);
+	cout << "s:" << s << "e:" << e << endl;
 	for each (int val in arr)
 	{
 		cout << val << " ";
