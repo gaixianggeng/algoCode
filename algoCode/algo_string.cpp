@@ -557,41 +557,53 @@ void quickSort(vector<int>& arr, int left, int right)
 //获取第k大数据
 int	quickSortK(vector<int>& nums, int k) {
 
-	position(nums,0,nums.size()-1);
-		
-	return k;
+	int s = nums.size() - k;
+	position(nums, 0, nums.size() - 1, s);
+
+	return nums[s];
 }
 
 //快速排序
-void position(vector<int>& arr, int left, int right) {
-	if (left >=right){
+void position(vector<int>& arr, int left, int right, int k) {
+	if (left >= right) {
 		return;
 	}
 	int s = left;
 	int e = right;
 	int temp = arr[left];
-	while (s<e)
+	while (s < e)
 	{
-		while (arr[e]>=temp && s<e)
+		while (arr[e] >= temp && s < e)
 		{
 			e--;
 		}
-		while (arr[s]<=temp &&s<e)
+		while (arr[s] <= temp && s < e)
 		{
 			s++;
 		}
-		if (s<e) {
+		if (s < e) {
 			swap(arr[s], arr[e]);
 		}
 	}
-	swap(arr[left],arr[e]);
+	swap(arr[left], arr[s]);
 	cout << "s:" << s << "e:" << e << endl;
 	for each (int val in arr)
 	{
 		cout << val << " ";
 	}
 	cout << endl;
-	position(arr,0, s - 1);
-	position(arr,e+1, right);
-	
+	if (s == k) {
+		return;
+	}
+	if (s > k) {
+
+		position(arr, 0, s - 1, k);
+
+	}
+	if (s < k) {
+
+		position(arr, s + 1, right, k);
+	}
+
+
 }
