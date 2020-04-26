@@ -29,3 +29,4 @@ int search(vector<int>&, int);
 void quickSort(vector<int>&, int, int);
 int	quickSortK(vector<int>&, int);
 void position(vector<int>&, int, int,int);
+int longestConsecutive(vector<int>&);

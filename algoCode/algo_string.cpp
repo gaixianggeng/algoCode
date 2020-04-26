@@ -607,3 +607,10 @@ void position(vector<int>& arr, int left, int right, int k) {
 
 
 }
+
+
+//最长连续序列
+//通过map 遍历nums。假定每个item都是第一个 判断+1是否存在map里面，存在的话 更新长度。最后取最大值。
+int longestConsecutive(vector<int>& nums) {
+
+}
