@@ -645,3 +645,10 @@ int longestConsecutive(vector<int>& nums) {
 	}
 	return longest;
 }
+
+
+//第k个排列
+//初步想法 递归 依次确定
+string getPermutation(int n, int k) {
+
+}
