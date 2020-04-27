@@ -611,32 +611,37 @@ void position(vector<int>& arr, int left, int right, int k) {
 
 //最长连续序列
 //通过map 遍历nums。假定每个item都是第一个 判断+1或-1是否存在map里面，存在的话 更新长度。最后取最大值。
+//思路没错 超时 要求时间复杂度为n
 int longestConsecutive(vector<int>& nums) {
 	map<int, int> nMap;
 	int longest = 0;
 	for (int i = 0; i < nums.size(); i++)
 	{
-		int l = 1;
 		if (nMap.find(nums[i]) == nMap.end()) {
 			nMap[nums[i]] = 1;
 		}
-		else
-		{
-			nMap[nums[i]]++;
-		}
+	}
+
+	for (int i = 0; i < nums.size(); i++) {
+		int l = 1;
 		int temp = nums[i];
-		while (nMap.find(temp - 1) != nMap.end())
-		{
-			temp--;
-			l++;
+		//这个if判断是控制时间复杂度的关键 假设取到的都是最小的
+		if (nMap.find(temp - 1) == nMap.end()) {
+			while (nMap.find(temp + 1) != nMap.end())
+			{
+				l++;
+				temp++;
+			}
+
 		}
-		while (nMap.find(temp + 1) != nMap.end())
-		{
-			temp++;
-			l++;
-		}
+		/*	temp = nums[i];
+	while (nMap.find(temp + 1) != nMap.end())
+	{
+		l += nMap[temp + 1];
+		temp++;
+	}*/
 		longest = max(longest, l);
+
 	}
 	return longest;
-
 }
