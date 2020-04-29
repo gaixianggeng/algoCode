@@ -31,4 +31,5 @@ int	quickSortK(vector<int>&, int);
 void position(vector<int>&, int, int,int);
 int longestConsecutive(vector<int>&);
 string getPermutation(int n, int k);
-
+void permutation(int n, int k,int*,string&);
+void deleteItem(int*,int, int);

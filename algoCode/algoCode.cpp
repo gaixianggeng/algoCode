@@ -97,9 +97,11 @@ int main()
 	//}
 	//cout << endl;
 
-	vector<int> nums = { 2,3,5,8,34,56,4,90,7,6 };
-	int length = longestConsecutive(nums);
-	cout << length << endl;
+	//vector<int> nums = { 2,3,5,8,34,56,4,90,7,6 };
+	//int length = longestConsecutive(nums);
+
+	string num = getPermutation(4,9);
+	cout << num << endl;
 	return 0;
 
 }

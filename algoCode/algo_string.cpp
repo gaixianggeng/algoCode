@@ -649,6 +649,49 @@ int longestConsecutive(vector<int>& nums) {
 
 //第k个排列
 //初步想法 递归 依次确定
+//先实现n个数字依次打印 再找对应k的数字
 string getPermutation(int n, int k) {
+	int* nums = new int[n];
+	map<int, int> numMap;
+	for (int i = 0; i < n; i++)
+	{
+		nums[i] = i + 1;
+	}
+	string s = "";
+	permutation(n, k, nums,s);
+	return s;
 
 }
+
+void permutation(int n, int k, int* nums,string& s) {
+	if (n ==0) {
+		return;
+	}
+	if (k == 0) {
+		for (int i = 0; i < n;i++) {
+			s += to_string(nums[i]);
+		}
+		return;
+	}
+	int sum = 1;
+	for (int i = 1; i < n; i++) {
+		sum *= i;
+	}
+	int current = k / sum + 1;
+	if (k % sum == 0) {
+		current = current - 1;
+	}
+	s += to_string(nums[current - 1]);
+	deleteItem(nums, n - 1, current - 1);
+	int beLeft = k - sum * (current - 1);
+	permutation(n - 1, beLeft, nums,s);
+}
+
+
+void deleteItem(int* nums, int l, int index) {
+	while (index < l) {
+		nums[index] = nums[index + 1];
+		index++;
+	}
+}
+
