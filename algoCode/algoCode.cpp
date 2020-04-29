@@ -99,9 +99,19 @@ int main()
 
 	//vector<int> nums = { 2,3,5,8,34,56,4,90,7,6 };
 	//int length = longestConsecutive(nums);
-
-	string num = getPermutation(4,9);
+	//第k个排列
+	//string num = getPermutation(4,9);
+	//cout << num << endl;
+	//朋友圈
+	vector<vector<int>> m = {
+		{1,1,0},
+		{1,1,1},
+		{0,1,1},
+	};
+	int num = findCircleNum(m);
 	cout << num << endl;
+	
+	
 	return 0;
 
 }

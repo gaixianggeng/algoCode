@@ -658,17 +658,17 @@ string getPermutation(int n, int k) {
 		nums[i] = i + 1;
 	}
 	string s = "";
-	permutation(n, k, nums,s);
+	permutation(n, k, nums, s);
 	return s;
 
 }
 
-void permutation(int n, int k, int* nums,string& s) {
-	if (n ==0) {
+void permutation(int n, int k, int* nums, string& s) {
+	if (n == 0) {
 		return;
 	}
 	if (k == 0) {
-		for (int i = 0; i < n;i++) {
+		for (int i = 0; i < n; i++) {
 			s += to_string(nums[i]);
 		}
 		return;
@@ -684,7 +684,7 @@ void permutation(int n, int k, int* nums,string& s) {
 	s += to_string(nums[current - 1]);
 	deleteItem(nums, n - 1, current - 1);
 	int beLeft = k - sum * (current - 1);
-	permutation(n - 1, beLeft, nums,s);
+	permutation(n - 1, beLeft, nums, s);
 }
 
 
@@ -695,3 +695,45 @@ void deleteItem(int* nums, int l, int index) {
 	}
 }
 
+//ÅóÓÑÈ¦
+int findCircleNum(vector<vector<int>>& M) {
+	int friendNum = 0;
+	bool beforeFriend = false;
+	bool afterFriend = false;
+	bool hasFriend = false;
+	bool isFriend = false;
+
+	for (int i = 0; i < M.size() - 1; i++)
+	{
+		bool n = beforeFriend;
+		beforeFriend = false;
+
+		for (int n = 0; n < M.size(); n++)
+		{
+			cout << M[i][n] << endl;
+			if (M[i][n] == 1) {
+				isFriend = true;
+				if (M[i + 1][n] == 1) {
+					beforeFriend = true;
+				}
+			}
+
+		}
+		if (isFriend && !n) {
+			friendNum++;
+		}
+		cout << "friend num:" << friendNum<<" is:"<<beforeFriend << endl;
+		
+	}
+	for (int i = 0; i < M.size(); i++) {
+		if (M[M.size() - 1][i] == 1) {
+			afterFriend = true;
+		}
+	}
+	if (!beforeFriend && afterFriend) {
+		friendNum++;
+	}
+	return friendNum;
+
+
+}

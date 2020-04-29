@@ -33,3 +33,4 @@ int longestConsecutive(vector<int>&);
 string getPermutation(int n, int k);
 void permutation(int n, int k,int*,string&);
 void deleteItem(int*,int, int);
+int findCircleNum(vector<vector<int>>&);
