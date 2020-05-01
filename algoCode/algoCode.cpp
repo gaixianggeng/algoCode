@@ -104,9 +104,10 @@ int main()
 	//cout << num << endl;
 	//朋友圈
 	vector<vector<int>> m = {
-		{1,1,0},
-		{1,1,1},
-		{0,1,1},
+		{1,0,0,1},
+		{0,1,1,0},
+		{0,1,1,1},
+		{1,0,1,1},
 	};
 	int num = findCircleNum(m);
 	cout << num << endl;
