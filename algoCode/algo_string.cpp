@@ -1,4 +1,5 @@
 #include "algoString.h"
+#include "unionFind.cpp"
 
 //leetcode 1 两数之和
 vector<int> twoSum(vector<int>& nums, int target)
@@ -697,43 +698,19 @@ void deleteItem(int* nums, int l, int index) {
 
 //朋友圈
 int findCircleNum(vector<vector<int>>& M) {
-	int friendNum = 0;
-	bool beforeFriend = false;
-	bool afterFriend = false;
-	bool hasFriend = false;
-	bool isFriend = false;
-
-	for (int i = 0; i < M.size() - 1; i++)
+	int m = M.size();
+	int n = M[0].size();
+	UF* uf = new UF(m);
+	for (int i = 0; i < m; i++)
 	{
-		bool n = beforeFriend;
-		beforeFriend = false;
-
-		for (int n = 0; n < M.size(); n++)
+		for (int j =i+1; j < n; j++)
 		{
-			cout << M[i][n] << endl;
-			if (M[i][n] == 1) {
-				isFriend = true;
-				if (M[i + 1][n] == 1) {
-					beforeFriend = true;
-				}
+			if (M[i][j] == 1) {
+				uf->Union(i, j);
 			}
 
 		}
-		if (isFriend && !n) {
-			friendNum++;
-		}
-		cout << "friend num:" << friendNum<<" is:"<<beforeFriend << endl;
-		
-	}
-	for (int i = 0; i < M.size(); i++) {
-		if (M[M.size() - 1][i] == 1) {
-			afterFriend = true;
-		}
-	}
-	if (!beforeFriend && afterFriend) {
-		friendNum++;
-	}
-	return friendNum;
 
-
+	}
+	return uf->Count();
 }

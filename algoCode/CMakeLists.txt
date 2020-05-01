@@ -4,6 +4,6 @@
 cmake_minimum_required (VERSION 3.8)
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (algoCode "algoCode.cpp" "algoCode.h" "algo_string.cpp")
+add_executable (algoCode "algoCode.cpp" "algoCode.h" "algo_string.cpp" "unionFind.cpp")
 
 # TODO: 如有需要，请添加测试并安装目标。
