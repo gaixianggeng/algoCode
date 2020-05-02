@@ -714,3 +714,9 @@ int findCircleNum(vector<vector<int>>& M) {
 	}
 	return uf->Count();
 }
+
+//¿¿¿¿
+vector<vector<int>> merge(vector<vector<int>>& intervals){
+
+	return intervals;
+}

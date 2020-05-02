@@ -103,16 +103,27 @@ int main()
 	//string num = getPermutation(4,9);
 	//cout << num << endl;
 	//朋友圈
-	vector<vector<int>> m = {
-		{1,0,0,1},
-		{0,1,1,0},
-		{0,1,1,1},
-		{1,0,1,1},
+//	vector<vector<int>> m = {
+//		{1,0,0,1},
+//		{0,1,1,0},
+//		{0,1,1,1},
+//		{1,0,1,1},
+//	};
+//	int num = findCircleNum(m);
+//	cout << num << endl;
+
+	vector<vector<int>>  m = {
+		{1,3},
+		{2,6},
+		{8,10},
+		{15,18},
 	};
-	int num = findCircleNum(m);
-	cout << num << endl;
 	
-	
+	vector<vector<int>>  res = merge(m);
+	for(int i = 0;i<res.size();i++){
+		cout<<res[i][0]<<":"<<res[i][1]<<endl;
+	}
+
 	return 0;
 
 }
