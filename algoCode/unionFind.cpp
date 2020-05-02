@@ -1,4 +1,4 @@
-#include "algoString.h";
+ï»¿#include "algoString.h";
 class UF
 {
 public:
@@ -46,7 +46,7 @@ private:
 	int count;
 	vector<int> Size;
 	vector<int> parent;
-	//Ñ°ÕÒxµÄ¸¸½Úµã
+	//å¯»æ‰¾xçš„çˆ¶èŠ‚ç‚¹
 	int find(int x) {
 		while (parent[x] != x)
 		{
