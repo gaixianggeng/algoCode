@@ -86,7 +86,26 @@ string longestCommonPrefix(vector<string>& strs)
 //按列求
 //接雨水02
 int trap(vector<int>& height){
+	stack<int> mStack;
+	int current = 0;
+	int sum = 0;
+	while(current < height.size()){
+		while(!mStack.empty() && height[current]>height[mStack.top()]){
+			int c = height[mStack.top()];
+			mStack.pop();
+			if (mStack.empty()){
+				break;
 
+			}
+			int lenght = current - mStack.top()-1;
+			int h = min(height[current],height[mStack.top()]);
+			sum+= (h-c)*lenght;	
+		}
+
+		mStack.push(current);
+		current++;
+	}
+	return sum;
 }
 //接雨水01
 int trap01(vector<int>& height)

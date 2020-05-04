@@ -9,6 +9,7 @@
 #include <string>
 #include <cstring>
 #include <algorithm>
+#include <stack>
 
 
 using namespace std;
