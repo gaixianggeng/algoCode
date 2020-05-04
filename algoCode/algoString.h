@@ -14,6 +14,7 @@
 using namespace std;
 // TODO: 在此处引用程序需要的其他标头。
 int trap(vector<int>&);
+int trap01(vector<int>&);
 int engthOfLongestSubstring(string);
 bool checkInclusion(string, string);
 string longestCommonPrefix(vector<string>&);

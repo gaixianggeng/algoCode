@@ -84,7 +84,12 @@ string longestCommonPrefix(vector<string>& strs)
 
 //½ÓÓêË® https://leetcode-cn.com/problems/trapping-rain-water/
 //°´ÁĞÇó
-int trap(vector<int>& height)
+//¿¿¿02
+int trap(vector<int>& height){
+
+}
+//¿¿¿01
+int trap01(vector<int>& height)
 {
 	int sum = 0;
 

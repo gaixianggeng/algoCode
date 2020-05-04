@@ -32,11 +32,11 @@ int main()
 	  //cout << boolalpha << isExists << endl;
 
 
-	  //vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
-	  //int sum = trap(height);
-	  //cout << sum << endl;
+	  vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	  int sum = trap(height);
+	  cout << sum << endl;
 
-	  //string num1 = "100";
+	  //string num2 = "100";
 	  //string num2 = "100";
 	  //string sum =multiply(num1, num2);
 	  //cout << sum << endl;
@@ -112,17 +112,17 @@ int main()
 //	int num = findCircleNum(m);
 //	cout << num << endl;
 
-	vector<vector<int>>  m = {
-		{1,3},
-		{2,6},
-		{8,10},
-		{15,18},
-	};
+//	vector<vector<int>>  m = {
+//		{1,3},
+//		{2,6},
+//		{8,10},
+//		{15,18},
+//	};
 	
-	vector<vector<int>>  res = merge(m);
-	for(int i = 0;i<res.size();i++){
-		cout<<res[i][0]<<":"<<res[i][1]<<endl;
-	}
+//	vector<vector<int>>  res = merge(m);
+//	for(int i = 0;i<res.size();i++){
+//		cout<<res[i][0]<<":"<<res[i][1]<<endl;
+//	}
 
 	return 0;
 
