@@ -84,11 +84,11 @@ string longestCommonPrefix(vector<string>& strs)
 
 //接雨水 https://leetcode-cn.com/problems/trapping-rain-water/
 //按列求
-//靠�02
+//接雨水02
 int trap(vector<int>& height){
 
 }
-//靠�01
+//接雨水01
 int trap01(vector<int>& height)
 {
 	int sum = 0;
