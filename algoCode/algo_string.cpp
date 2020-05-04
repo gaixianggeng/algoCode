@@ -1,7 +1,7 @@
-#include "algoString.h"
+ï»¿#include "algoString.h"
 #include "unionFind.cpp"
 
-//leetcode 1 Á½ÊıÖ®ºÍ
+//leetcode 1 ä¸¤æ•°ä¹‹å’Œ
 vector<int> twoSum(vector<int>& nums, int target)
 {
 	vector<int> indexList;
@@ -24,9 +24,9 @@ vector<int> twoSum(vector<int>& nums, int target)
 	return indexList;
 }
 
-//leetcode 3 ÎŞÖØ¸´×Ö·ûµÄ×î³¤×Ó´®
-//½¨Ò»¸ömap´æ´¢Ã¿¸ö×Ö·û£¬endIndexÀÛ¼Ó
-//Èçkey´æÔÚµÄ»° ¸úĞÂlongest startIndexÍ¬Ê±¼ÓÒ»
+//leetcode 3 æ— é‡å¤å­—ç¬¦çš„æœ€é•¿å­ä¸²
+//å»ºä¸€ä¸ªmapå­˜å‚¨æ¯ä¸ªå­—ç¬¦ï¼ŒendIndexç´¯åŠ 
+//å¦‚keyå­˜åœ¨çš„è¯ è·Ÿæ–°longest startIndexåŒæ—¶åŠ ä¸€
 int engthOfLongestSubstring(string s)
 {
 
@@ -38,7 +38,7 @@ int engthOfLongestSubstring(string s)
 
 	for (int i = 0; i < s.size(); i++)
 	{
-		//ÒÑ¾­´æÈëÊı¾İ
+		//å·²ç»å­˜å…¥æ•°æ®
 		if (subMap.count(s[i]) > 0 && subMap[s[i]] >= startIndex)
 		{
 			longest = endIndex - startIndex > longest ? endIndex - startIndex : longest;
@@ -52,8 +52,8 @@ int engthOfLongestSubstring(string s)
 	return endIndex - startIndex > longest ? endIndex - startIndex : longest;
 }
 
-//×î³¤¹«¹²Ç°×º
-//È¡Ç°Á½¸öµÄ×î³¤¹«¹²Ç°×º Ö®ºó½«È¡µÃµÄÇ°×ºÒÀ´Î¸úºóÃæµÄ±È½Ï
+//æœ€é•¿å…¬å…±å‰ç¼€
+//å–å‰ä¸¤ä¸ªçš„æœ€é•¿å…¬å…±å‰ç¼€ ä¹‹åå°†å–å¾—çš„å‰ç¼€ä¾æ¬¡è·Ÿåé¢çš„æ¯”è¾ƒ
 string longestCommonPrefix(vector<string>& strs)
 {
 	if (strs.size() == 0)
@@ -82,13 +82,13 @@ string longestCommonPrefix(vector<string>& strs)
 	return commStr.substr(0, n);
 }
 
-//½ÓÓêË® https://leetcode-cn.com/problems/trapping-rain-water/
-//°´ÁĞÇó
-//¿¿¿02
+//æ¥é›¨æ°´ https://leetcode-cn.com/problems/trapping-rain-water/
+//æŒ‰åˆ—æ±‚
+//é ï¿½02
 int trap(vector<int>& height){
 
 }
-//¿¿¿01
+//é ï¿½01
 int trap01(vector<int>& height)
 {
 	int sum = 0;
@@ -99,7 +99,7 @@ int trap01(vector<int>& height)
 		int leftHeight = 0;
 		int rightHeight = 0;
 
-		//»ñÈ¡µ±Ç°Êı×ÖµÄ×óÓÒ×î´óÖµ
+		//è·å–å½“å‰æ•°å­—çš„å·¦å³æœ€å¤§å€¼
 		for (int n = 0; n < height.size(); n++)
 		{
 			if (n < i)
@@ -128,7 +128,7 @@ int trap01(vector<int>& height)
 	return sum;
 }
 
-//×Ö·û´®µÄÅÅÁĞ
+//å­—ç¬¦ä¸²çš„æ’åˆ—
 bool checkInclusion(string s1, string s2)
 {
 
@@ -162,7 +162,7 @@ bool checkInclusion(string s1, string s2)
 	return m1 == m2 ? true : false;
 }
 
-//×Ö·û´®Ïà³Ë
+//å­—ç¬¦ä¸²ç›¸ä¹˜
 string multiply(string num1, string num2)
 {
 	if (num1 == "0" || num2 == "0")
@@ -209,7 +209,7 @@ string multiply(string num1, string num2)
 	return res;
 }
 
-//·­×ª×Ö·û´®ÀïµÄµ¥´Ê
+//ç¿»è½¬å­—ç¬¦ä¸²é‡Œçš„å•è¯
 
 string reverseWords(string s)
 {
@@ -260,7 +260,7 @@ string reverseWords(string s)
 	return res;
 }
 
-//¼ò»¯Â·¾¶ Ö±½Ó×Ö·û´®·Ö¸î Æ´½Ó×Ö·û´®
+//ç®€åŒ–è·¯å¾„ ç›´æ¥å­—ç¬¦ä¸²åˆ†å‰² æ‹¼æ¥å­—ç¬¦ä¸²
 string simplifyPath(string path)
 {
 	string sub = "/";
@@ -309,7 +309,7 @@ string simplifyPath(string path)
 	return fPath;
 }
 
-//93 ¸´Ô­ipµØÖ·
+//93 å¤åŸipåœ°å€
 vector<string> restoreIpAddresses(string s)
 {
 	s = "010010";
@@ -359,8 +359,8 @@ vector<string> restoreIpAddresses(string s)
 	return ipList;
 }
 
-//15ÈıÊıÖ®ºÍ
-//Á½ÊıÖ®ºÍµÄË¼Â·Ì×ÔÚÕâÀï ĞèÒªÈ¥ÖØ  ËùÒÔ²ÉÓÃ×óÓÒ±ê³ß·½Ê½
+//15ä¸‰æ•°ä¹‹å’Œ
+//ä¸¤æ•°ä¹‹å’Œçš„æ€è·¯å¥—åœ¨è¿™é‡Œ éœ€è¦å»é‡  æ‰€ä»¥é‡‡ç”¨å·¦å³æ ‡å°ºæ–¹å¼
 vector<vector<int>> threeSum(vector<int>& nums)
 {
 	vector<vector<int>> sumList;
@@ -418,7 +418,7 @@ vector<vector<int>> threeSum(vector<int>& nums)
 	return sumList;
 }
 
-//695 µºÓì×î´óÃæ»ı
+//695 å²›å±¿æœ€å¤§é¢ç§¯
 int maxAreaOfIsland(vector<vector<int>>& grid)
 {
 	int m = grid.size();
@@ -499,7 +499,7 @@ int search(vector<int>& nums, int target)
 	return -1;
 }
 
-//¿ìÅÅ
+//å¿«æ’
 void quickSoort(vector<int>& nums, int s, int e)
 {
 	if (s >= e) {
@@ -510,7 +510,7 @@ void quickSoort(vector<int>& nums, int s, int e)
 	int j = e;
 	while (i < j)
 	{
-		//Ìí¼Ói<j ÊÇÎªÁË·ÀÖ¹³öÏÖ×îºói>jµÄÇé¿ö
+		//æ·»åŠ i<j æ˜¯ä¸ºäº†é˜²æ­¢å‡ºç°æœ€åi>jçš„æƒ…å†µ
 		if (nums[j] >= temp && i < j)
 		{
 			j--;
@@ -531,14 +531,14 @@ void quickSoort(vector<int>& nums, int s, int e)
 	quickSort(nums, i + 1, e);
 
 }
-//¿ìÅÅ ÍøÉÏ´ğ°¸
+//å¿«æ’ ç½‘ä¸Šç­”æ¡ˆ
 void quickSort(vector<int>& arr, int left, int right)
 {
 	if (left >= right)
 		return;
 	int i, j, base, temp;
 	i = left, j = right;
-	base = arr[left];  //È¡×î×ó±ßµÄÊıÎª»ù×¼Êı
+	base = arr[left];  //å–æœ€å·¦è¾¹çš„æ•°ä¸ºåŸºå‡†æ•°
 	while (i < j)
 	{
 		while (arr[j] >= base && i < j)
@@ -553,14 +553,14 @@ void quickSort(vector<int>& arr, int left, int right)
 		}
 	}
 	cout << i << "--" << j << endl;
-	//»ù×¼Êı¹éÎ»
+	//åŸºå‡†æ•°å½’ä½
 	arr[left] = arr[i];
 	arr[i] = base;
-	quickSort(arr, left, i - 1);//µİ¹é×ó±ß
-	quickSort(arr, i + 1, right);//µİ¹éÓÒ±ß
+	quickSort(arr, left, i - 1);//é€’å½’å·¦è¾¹
+	quickSort(arr, i + 1, right);//é€’å½’å³è¾¹
 }
 
-//»ñÈ¡µÚk´óÊı¾İ
+//è·å–ç¬¬kå¤§æ•°æ®
 int	quickSortK(vector<int>& nums, int k) {
 
 	int s = nums.size() - k;
@@ -569,7 +569,7 @@ int	quickSortK(vector<int>& nums, int k) {
 	return nums[s];
 }
 
-//¿ìËÙÅÅĞò
+//å¿«é€Ÿæ’åº
 void position(vector<int>& arr, int left, int right, int k) {
 	if (left >= right) {
 		return;
@@ -615,9 +615,9 @@ void position(vector<int>& arr, int left, int right, int k) {
 }
 
 
-//×î³¤Á¬ĞøĞòÁĞ
-//Í¨¹ımap ±éÀúnums¡£¼Ù¶¨Ã¿¸öitem¶¼ÊÇµÚÒ»¸ö ÅĞ¶Ï+1»ò-1ÊÇ·ñ´æÔÚmapÀïÃæ£¬´æÔÚµÄ»° ¸üĞÂ³¤¶È¡£×îºóÈ¡×î´óÖµ¡£
-//Ë¼Â·Ã»´í ³¬Ê± ÒªÇóÊ±¼ä¸´ÔÓ¶ÈÎªn
+//æœ€é•¿è¿ç»­åºåˆ—
+//é€šè¿‡map éå†numsã€‚å‡å®šæ¯ä¸ªiteméƒ½æ˜¯ç¬¬ä¸€ä¸ª åˆ¤æ–­+1æˆ–-1æ˜¯å¦å­˜åœ¨mapé‡Œé¢ï¼Œå­˜åœ¨çš„è¯ æ›´æ–°é•¿åº¦ã€‚æœ€åå–æœ€å¤§å€¼ã€‚
+//æ€è·¯æ²¡é”™ è¶…æ—¶ è¦æ±‚æ—¶é—´å¤æ‚åº¦ä¸ºn
 int longestConsecutive(vector<int>& nums) {
 	map<int, int> nMap;
 	int longest = 0;
@@ -631,7 +631,7 @@ int longestConsecutive(vector<int>& nums) {
 	for (int i = 0; i < nums.size(); i++) {
 		int l = 1;
 		int temp = nums[i];
-		//Õâ¸öifÅĞ¶ÏÊÇ¿ØÖÆÊ±¼ä¸´ÔÓ¶ÈµÄ¹Ø¼ü ¼ÙÉèÈ¡µ½µÄ¶¼ÊÇ×îĞ¡µÄ
+		//è¿™ä¸ªifåˆ¤æ–­æ˜¯æ§åˆ¶æ—¶é—´å¤æ‚åº¦çš„å…³é”® å‡è®¾å–åˆ°çš„éƒ½æ˜¯æœ€å°çš„
 		if (nMap.find(temp - 1) == nMap.end()) {
 			while (nMap.find(temp + 1) != nMap.end())
 			{
@@ -653,9 +653,9 @@ int longestConsecutive(vector<int>& nums) {
 }
 
 
-//µÚk¸öÅÅÁĞ
-//³õ²½Ïë·¨ µİ¹é ÒÀ´ÎÈ·¶¨
-//ÏÈÊµÏÖn¸öÊı×ÖÒÀ´Î´òÓ¡ ÔÙÕÒ¶ÔÓ¦kµÄÊı×Ö
+//ç¬¬kä¸ªæ’åˆ—
+//åˆæ­¥æƒ³æ³• é€’å½’ ä¾æ¬¡ç¡®å®š
+//å…ˆå®ç°nä¸ªæ•°å­—ä¾æ¬¡æ‰“å° å†æ‰¾å¯¹åº”kçš„æ•°å­—
 string getPermutation(int n, int k) {
 	int* nums = new int[n];
 	map<int, int> numMap;
@@ -701,7 +701,7 @@ void deleteItem(int* nums, int l, int index) {
 	}
 }
 
-//ÅóÓÑÈ¦
+//æœ‹å‹åœˆ
 int findCircleNum(vector<vector<int>>& M) {
 	int m = M.size();
 	int n = M[0].size();
@@ -720,7 +720,7 @@ int findCircleNum(vector<vector<int>>& M) {
 	return uf->Count();
 }
 
-//ºÏ²¢Çø¼ä
+//åˆå¹¶åŒºé—´
 vector<vector<int>> merge(vector<vector<int>>& intervals) {
 	vector<vector<int>> merged;
 
