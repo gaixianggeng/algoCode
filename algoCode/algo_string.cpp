@@ -703,7 +703,7 @@ int findCircleNum(vector<vector<int>>& M) {
 	UF* uf = new UF(m);
 	for (int i = 0; i < m; i++)
 	{
-		for (int j =i+1; j < n; j++)
+		for (int j = i + 1; j < n; j++)
 		{
 			if (M[i][j] == 1) {
 				uf->Union(i, j);
@@ -715,8 +715,21 @@ int findCircleNum(vector<vector<int>>& M) {
 	return uf->Count();
 }
 
-//靠靠
-vector<vector<int>> merge(vector<vector<int>>& intervals){
+//合并区间
+vector<vector<int>> merge(vector<vector<int>>& intervals) {
+	vector<vector<int>> merged;
 
-	return intervals;
+	sort(intervals.begin(),intervals.end());
+
+	for (int i = 0; i < intervals.size(); i++)
+	{
+		if (!merged.size()|| merged.back()[1] < intervals[i][0]) {
+			merged.push_back({intervals[i][0],intervals[i][1]});
+		}
+		else {
+			merged.back()[1] = max(intervals[i][1], merged.back()[1]);
+		}
+	}
+
+	return merged;
 }
