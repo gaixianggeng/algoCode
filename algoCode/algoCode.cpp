@@ -2,7 +2,6 @@
 //
 
 #include "algoCode.h"
-#include "algoString.h"
 
 using namespace std;
 
@@ -124,6 +123,7 @@ int main()
 //		cout<<res[i][0]<<":"<<res[i][1]<<endl;
 //	}
 
+	testListNode();
 	return 0;
 
 }

@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/algoCode.dir/algoCode.cpp.o CMakeFiles/algoCode.dir/listTree.cpp.o CMakeFiles/algoCode.dir/string.cpp.o CMakeFiles/algoCode.dir/arraySort.cpp.o CMakeFiles/algoCode.dir/unionFind.cpp.o  -o algoCode 

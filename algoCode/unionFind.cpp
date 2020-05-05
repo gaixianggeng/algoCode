@@ -1,4 +1,4 @@
-﻿#include "algoString.h";
+﻿#include "algoCode.h";
 class UF
 {
 public:
