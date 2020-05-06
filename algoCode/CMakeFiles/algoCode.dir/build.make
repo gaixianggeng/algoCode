@@ -43,84 +43,84 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gaih/code/c++/algoCode
+CMAKE_SOURCE_DIR = /home/gaih/code/c++/algoCode/algoCode
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gaih/code/c++/algoCode
+CMAKE_BINARY_DIR = /home/gaih/code/c++/algoCode/algoCode
 
 # Include any dependencies generated for this target.
-include algoCode/CMakeFiles/algoCode.dir/depend.make
+include CMakeFiles/algoCode.dir/depend.make
 
 # Include the progress variables for this target.
-include algoCode/CMakeFiles/algoCode.dir/progress.make
+include CMakeFiles/algoCode.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include algoCode/CMakeFiles/algoCode.dir/flags.make
+include CMakeFiles/algoCode.dir/flags.make
 
-algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.o: algoCode/CMakeFiles/algoCode.dir/flags.make
-algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.o: algoCode/algoCode.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.o"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/algoCode.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp
+CMakeFiles/algoCode.dir/algoCode.cpp.o: CMakeFiles/algoCode.dir/flags.make
+CMakeFiles/algoCode.dir/algoCode.cpp.o: algoCode.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/algoCode.dir/algoCode.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/algoCode.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp
 
-algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.i: cmake_force
+CMakeFiles/algoCode.dir/algoCode.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algoCode.dir/algoCode.cpp.i"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp > CMakeFiles/algoCode.dir/algoCode.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp > CMakeFiles/algoCode.dir/algoCode.cpp.i
 
-algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.s: cmake_force
+CMakeFiles/algoCode.dir/algoCode.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algoCode.dir/algoCode.cpp.s"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp -o CMakeFiles/algoCode.dir/algoCode.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/algoCode.cpp -o CMakeFiles/algoCode.dir/algoCode.cpp.s
 
-algoCode/CMakeFiles/algoCode.dir/listTree.cpp.o: algoCode/CMakeFiles/algoCode.dir/flags.make
-algoCode/CMakeFiles/algoCode.dir/listTree.cpp.o: algoCode/listTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object algoCode/CMakeFiles/algoCode.dir/listTree.cpp.o"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/listTree.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/listTree.cpp
+CMakeFiles/algoCode.dir/listTree.cpp.o: CMakeFiles/algoCode.dir/flags.make
+CMakeFiles/algoCode.dir/listTree.cpp.o: listTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/algoCode.dir/listTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/listTree.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/listTree.cpp
 
-algoCode/CMakeFiles/algoCode.dir/listTree.cpp.i: cmake_force
+CMakeFiles/algoCode.dir/listTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algoCode.dir/listTree.cpp.i"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/listTree.cpp > CMakeFiles/algoCode.dir/listTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/listTree.cpp > CMakeFiles/algoCode.dir/listTree.cpp.i
 
-algoCode/CMakeFiles/algoCode.dir/listTree.cpp.s: cmake_force
+CMakeFiles/algoCode.dir/listTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algoCode.dir/listTree.cpp.s"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/listTree.cpp -o CMakeFiles/algoCode.dir/listTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/listTree.cpp -o CMakeFiles/algoCode.dir/listTree.cpp.s
 
-algoCode/CMakeFiles/algoCode.dir/string.cpp.o: algoCode/CMakeFiles/algoCode.dir/flags.make
-algoCode/CMakeFiles/algoCode.dir/string.cpp.o: algoCode/string.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object algoCode/CMakeFiles/algoCode.dir/string.cpp.o"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/string.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/string.cpp
+CMakeFiles/algoCode.dir/string.cpp.o: CMakeFiles/algoCode.dir/flags.make
+CMakeFiles/algoCode.dir/string.cpp.o: string.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/algoCode.dir/string.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/string.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/string.cpp
 
-algoCode/CMakeFiles/algoCode.dir/string.cpp.i: cmake_force
+CMakeFiles/algoCode.dir/string.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algoCode.dir/string.cpp.i"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/string.cpp > CMakeFiles/algoCode.dir/string.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/string.cpp > CMakeFiles/algoCode.dir/string.cpp.i
 
-algoCode/CMakeFiles/algoCode.dir/string.cpp.s: cmake_force
+CMakeFiles/algoCode.dir/string.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algoCode.dir/string.cpp.s"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/string.cpp -o CMakeFiles/algoCode.dir/string.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/string.cpp -o CMakeFiles/algoCode.dir/string.cpp.s
 
-algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.o: algoCode/CMakeFiles/algoCode.dir/flags.make
-algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.o: algoCode/arraySort.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.o"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/arraySort.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp
+CMakeFiles/algoCode.dir/arraySort.cpp.o: CMakeFiles/algoCode.dir/flags.make
+CMakeFiles/algoCode.dir/arraySort.cpp.o: arraySort.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/algoCode.dir/arraySort.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/arraySort.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp
 
-algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.i: cmake_force
+CMakeFiles/algoCode.dir/arraySort.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algoCode.dir/arraySort.cpp.i"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp > CMakeFiles/algoCode.dir/arraySort.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp > CMakeFiles/algoCode.dir/arraySort.cpp.i
 
-algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.s: cmake_force
+CMakeFiles/algoCode.dir/arraySort.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algoCode.dir/arraySort.cpp.s"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp -o CMakeFiles/algoCode.dir/arraySort.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/arraySort.cpp -o CMakeFiles/algoCode.dir/arraySort.cpp.s
 
-algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.o: algoCode/CMakeFiles/algoCode.dir/flags.make
-algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.o: algoCode/unionFind.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.o"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/unionFind.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp
+CMakeFiles/algoCode.dir/unionFind.cpp.o: CMakeFiles/algoCode.dir/flags.make
+CMakeFiles/algoCode.dir/unionFind.cpp.o: unionFind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/algoCode.dir/unionFind.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/algoCode.dir/unionFind.cpp.o -c /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp
 
-algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.i: cmake_force
+CMakeFiles/algoCode.dir/unionFind.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/algoCode.dir/unionFind.cpp.i"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp > CMakeFiles/algoCode.dir/unionFind.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp > CMakeFiles/algoCode.dir/unionFind.cpp.i
 
-algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.s: cmake_force
+CMakeFiles/algoCode.dir/unionFind.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/algoCode.dir/unionFind.cpp.s"
-	cd /home/gaih/code/c++/algoCode/algoCode && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp -o CMakeFiles/algoCode.dir/unionFind.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gaih/code/c++/algoCode/algoCode/unionFind.cpp -o CMakeFiles/algoCode.dir/unionFind.cpp.s
 
 # Object files for target algoCode
 algoCode_OBJECTS = \
@@ -133,26 +133,26 @@ algoCode_OBJECTS = \
 # External object files for target algoCode
 algoCode_EXTERNAL_OBJECTS =
 
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.o
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/listTree.cpp.o
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/string.cpp.o
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.o
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.o
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/build.make
-algoCode/algoCode: algoCode/CMakeFiles/algoCode.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gaih/code/c++/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable algoCode"
-	cd /home/gaih/code/c++/algoCode/algoCode && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/algoCode.dir/link.txt --verbose=$(VERBOSE)
+algoCode: CMakeFiles/algoCode.dir/algoCode.cpp.o
+algoCode: CMakeFiles/algoCode.dir/listTree.cpp.o
+algoCode: CMakeFiles/algoCode.dir/string.cpp.o
+algoCode: CMakeFiles/algoCode.dir/arraySort.cpp.o
+algoCode: CMakeFiles/algoCode.dir/unionFind.cpp.o
+algoCode: CMakeFiles/algoCode.dir/build.make
+algoCode: CMakeFiles/algoCode.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gaih/code/c++/algoCode/algoCode/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable algoCode"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/algoCode.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-algoCode/CMakeFiles/algoCode.dir/build: algoCode/algoCode
+CMakeFiles/algoCode.dir/build: algoCode
 
-.PHONY : algoCode/CMakeFiles/algoCode.dir/build
+.PHONY : CMakeFiles/algoCode.dir/build
 
-algoCode/CMakeFiles/algoCode.dir/clean:
-	cd /home/gaih/code/c++/algoCode/algoCode && $(CMAKE_COMMAND) -P CMakeFiles/algoCode.dir/cmake_clean.cmake
-.PHONY : algoCode/CMakeFiles/algoCode.dir/clean
+CMakeFiles/algoCode.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/algoCode.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/algoCode.dir/clean
 
-algoCode/CMakeFiles/algoCode.dir/depend:
-	cd /home/gaih/code/c++/algoCode && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gaih/code/c++/algoCode /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode/algoCode/CMakeFiles/algoCode.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : algoCode/CMakeFiles/algoCode.dir/depend
+CMakeFiles/algoCode.dir/depend:
+	cd /home/gaih/code/c++/algoCode/algoCode && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode/algoCode /home/gaih/code/c++/algoCode/algoCode/CMakeFiles/algoCode.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/algoCode.dir/depend
 

@@ -15,6 +15,15 @@
 
 using namespace std;
 // TODO: 在此处引用程序需要的其他标头。
+
+struct ListNode{
+	int val;
+	ListNode *next;
+	ListNode(int x):val(x),next(NULL){}
+};
+
+
+
 int trap(vector<int>&);
 int trap01(vector<int>&);
 int engthOfLongestSubstring(string);
@@ -39,3 +48,5 @@ void deleteItem(int*,int, int);
 int findCircleNum(vector<vector<int>>&);
 vector<vector<int>> merge(vector<vector<int>>&); 
 void testListNode();
+ListNode* mergeTwoList(ListNode*,ListNode*);
+void print(ListNode*);

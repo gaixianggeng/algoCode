@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gaih/code/c++/algoCode
+CMAKE_SOURCE_DIR = /home/gaih/code/c++/algoCode/algoCode
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gaih/code/c++/algoCode
+CMAKE_BINARY_DIR = /home/gaih/code/c++/algoCode/algoCode
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gaih/code/c++/algoCode && $(CMAKE_COMMAND) -E cmake_progress_start /home/gaih/code/c++/algoCode/CMakeFiles /home/gaih/code/c++/algoCode/algoCode/CMakeFiles/progress.marks
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f CMakeFiles/Makefile2 algoCode/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaih/code/c++/algoCode/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaih/code/c++/algoCode/algoCode/CMakeFiles /home/gaih/code/c++/algoCode/algoCode/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gaih/code/c++/algoCode/algoCode/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f CMakeFiles/Makefile2 algoCode/clean
+	$(MAKE) -f CMakeFiles/Makefile2 clean
 .PHONY : clean
 
 # The main clean target
@@ -97,32 +97,30 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f CMakeFiles/Makefile2 algoCode/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f CMakeFiles/Makefile2 algoCode/preinstall
+	$(MAKE) -f CMakeFiles/Makefile2 preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gaih/code/c++/algoCode && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-# Convenience name for target.
-algoCode/CMakeFiles/algoCode.dir/rule:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f CMakeFiles/Makefile2 algoCode/CMakeFiles/algoCode.dir/rule
-.PHONY : algoCode/CMakeFiles/algoCode.dir/rule
+#=============================================================================
+# Target rules for targets named algoCode
 
-# Convenience name for target.
-algoCode: algoCode/CMakeFiles/algoCode.dir/rule
-
+# Build rule for target.
+algoCode: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 algoCode
 .PHONY : algoCode
 
 # fast build rule for target.
 algoCode/fast:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/build
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/build
 .PHONY : algoCode/fast
 
 algoCode.o: algoCode.cpp.o
@@ -131,7 +129,7 @@ algoCode.o: algoCode.cpp.o
 
 # target to build an object file
 algoCode.cpp.o:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.o
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/algoCode.cpp.o
 .PHONY : algoCode.cpp.o
 
 algoCode.i: algoCode.cpp.i
@@ -140,7 +138,7 @@ algoCode.i: algoCode.cpp.i
 
 # target to preprocess a source file
 algoCode.cpp.i:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.i
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/algoCode.cpp.i
 .PHONY : algoCode.cpp.i
 
 algoCode.s: algoCode.cpp.s
@@ -149,7 +147,7 @@ algoCode.s: algoCode.cpp.s
 
 # target to generate assembly for a file
 algoCode.cpp.s:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/algoCode.cpp.s
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/algoCode.cpp.s
 .PHONY : algoCode.cpp.s
 
 arraySort.o: arraySort.cpp.o
@@ -158,7 +156,7 @@ arraySort.o: arraySort.cpp.o
 
 # target to build an object file
 arraySort.cpp.o:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.o
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/arraySort.cpp.o
 .PHONY : arraySort.cpp.o
 
 arraySort.i: arraySort.cpp.i
@@ -167,7 +165,7 @@ arraySort.i: arraySort.cpp.i
 
 # target to preprocess a source file
 arraySort.cpp.i:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.i
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/arraySort.cpp.i
 .PHONY : arraySort.cpp.i
 
 arraySort.s: arraySort.cpp.s
@@ -176,7 +174,7 @@ arraySort.s: arraySort.cpp.s
 
 # target to generate assembly for a file
 arraySort.cpp.s:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.s
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/arraySort.cpp.s
 .PHONY : arraySort.cpp.s
 
 listTree.o: listTree.cpp.o
@@ -185,7 +183,7 @@ listTree.o: listTree.cpp.o
 
 # target to build an object file
 listTree.cpp.o:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/listTree.cpp.o
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/listTree.cpp.o
 .PHONY : listTree.cpp.o
 
 listTree.i: listTree.cpp.i
@@ -194,7 +192,7 @@ listTree.i: listTree.cpp.i
 
 # target to preprocess a source file
 listTree.cpp.i:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/listTree.cpp.i
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/listTree.cpp.i
 .PHONY : listTree.cpp.i
 
 listTree.s: listTree.cpp.s
@@ -203,7 +201,7 @@ listTree.s: listTree.cpp.s
 
 # target to generate assembly for a file
 listTree.cpp.s:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/listTree.cpp.s
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/listTree.cpp.s
 .PHONY : listTree.cpp.s
 
 string.o: string.cpp.o
@@ -212,7 +210,7 @@ string.o: string.cpp.o
 
 # target to build an object file
 string.cpp.o:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/string.cpp.o
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/string.cpp.o
 .PHONY : string.cpp.o
 
 string.i: string.cpp.i
@@ -221,7 +219,7 @@ string.i: string.cpp.i
 
 # target to preprocess a source file
 string.cpp.i:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/string.cpp.i
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/string.cpp.i
 .PHONY : string.cpp.i
 
 string.s: string.cpp.s
@@ -230,7 +228,7 @@ string.s: string.cpp.s
 
 # target to generate assembly for a file
 string.cpp.s:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/string.cpp.s
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/string.cpp.s
 .PHONY : string.cpp.s
 
 unionFind.o: unionFind.cpp.o
@@ -239,7 +237,7 @@ unionFind.o: unionFind.cpp.o
 
 # target to build an object file
 unionFind.cpp.o:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.o
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/unionFind.cpp.o
 .PHONY : unionFind.cpp.o
 
 unionFind.i: unionFind.cpp.i
@@ -248,7 +246,7 @@ unionFind.i: unionFind.cpp.i
 
 # target to preprocess a source file
 unionFind.cpp.i:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.i
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/unionFind.cpp.i
 .PHONY : unionFind.cpp.i
 
 unionFind.s: unionFind.cpp.s
@@ -257,7 +255,7 @@ unionFind.s: unionFind.cpp.s
 
 # target to generate assembly for a file
 unionFind.cpp.s:
-	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/unionFind.cpp.s
+	$(MAKE) -f CMakeFiles/algoCode.dir/build.make CMakeFiles/algoCode.dir/unionFind.cpp.s
 .PHONY : unionFind.cpp.s
 
 # Help Target
@@ -295,6 +293,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gaih/code/c++/algoCode && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
