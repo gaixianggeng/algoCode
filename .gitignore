@@ -1,6 +1,9 @@
 out
 .vs
 algoCode/CMakeFiles/
+CMakeFiles/
 algoCode/Makefile
+Makefile
 algoCode/cmake_install.cmake
+cmake_install.cmake
 algoCode/*~
