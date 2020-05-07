@@ -59,8 +59,8 @@ void print(ListNode* p){
 	cout<<"end"<<endl;
 }
 
-//反转链表
-ListNode* reverseList(ListNode* head){
+//反转链表 数组倒排
+ListNode* reverseList1(ListNode* head){
 
 	if (!head){
 		return NULL;
@@ -79,6 +79,21 @@ ListNode* reverseList(ListNode* head){
 		t->next= NULL;
 		tempList->next = t;
 		tempList = t;
+	}
+	return reHead;
+}
+
+//链表反转 双指针
+ListNode* reverseList(ListNode* head){
+	ListNode* temp = new ListNode(0);
+	ListNode* cur = head; 
+	ListNode* reHead = NULL;
+
+	while(cur){
+		temp = cur->next;
+		cur->next = reHead;
+		reHead = cur;
+		cur = temp;
 	}
 	return reHead;
 }

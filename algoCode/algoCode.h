@@ -51,3 +51,4 @@ void testListNode();
 ListNode* mergeTwoList(ListNode*,ListNode*);
 void print(ListNode*);
 ListNode* reverseList(ListNode* head);
+ListNode* reverseList1(ListNode* head);
