@@ -50,3 +50,4 @@ vector<vector<int>> merge(vector<vector<int>>&);
 void testListNode();
 ListNode* mergeTwoList(ListNode*,ListNode*);
 void print(ListNode*);
+ListNode* reverseList(ListNode* head);

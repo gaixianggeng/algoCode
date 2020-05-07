@@ -1,2 +1,5 @@
 out
 .vs
+algoCode/CMakeFiles/
+algoCode/Makefile
+algoCode/cmake_install.cmake
