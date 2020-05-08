@@ -4,9 +4,9 @@
 
 
 void testListNode(){
-	ListNode* head1= new ListNode(2);
+	ListNode* head1= new ListNode(1);
 	ListNode* temp1 = head1;
-	vector<int> nums1 = {4,3};
+	vector<int> nums1 = {1};
 	for(int i=0;i<nums1.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums1[i];
@@ -14,10 +14,10 @@ void testListNode(){
 		temp1->next = temp;
 		temp1 = temp;
 	}
-	print(head1);
-	ListNode* head2= new ListNode(5);
+	print(head1->next);
+	ListNode* head2= new ListNode(9);
 	ListNode* temp3 = head2;
-	vector<int> nums2 = {6,4};
+	vector<int> nums2 = {9};
 	for(int i=0;i<nums2.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums2[i];
@@ -26,7 +26,7 @@ void testListNode(){
 		temp3 = temp;
 	}
 	print(head2);
-	ListNode* l = addTwoNumbers(head1,head2);
+	ListNode* l = addTwoNumbers(head1->next,head2);
 	print(l);
 	//reverseList(head1);
 }
@@ -103,6 +103,48 @@ ListNode* reverseList(ListNode* head){
 
 //两数相加
 ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
-	cout<<"test"<<endl; 
-	return l1;
+	ListNode* nSum = new ListNode(0);
+	ListNode* head = nSum;
+	int beforeNum = 0;
+	while (l1 || l2) {
+		ListNode* temp = new ListNode(0);
+		int tempVal = 0;
+		if (l1){
+			tempVal += l1->val;
+
+		}
+		if (l2){
+			tempVal += l2->val;
+
+		}
+
+		int val = (tempVal%10+beforeNum/10)%10;
+		beforeNum = tempVal+beforeNum/10;
+		cout<<beforeNum<<endl;
+		temp->val = val;
+		temp->next = NULL;
+		head->next = temp;
+		head = temp;
+
+		if (l1){
+			l1 = l1->next;
+
+		}
+		if (l2){
+			l2 = l2->next;
+
+
+		}
+
+
+
+	}
+	if (beforeNum /10 >=1){
+		ListNode* temp = new ListNode(0);
+		temp->val = beforeNum/10;
+		temp->next = NULL;
+		head->next = temp;
+
+	}
+	return nSum->next;
 }
