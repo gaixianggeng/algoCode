@@ -1,5 +1,0 @@
-/home/gaih/code/c++/algoCode/CMakeFiles/rebuild_cache.dir
-/home/gaih/code/c++/algoCode/CMakeFiles/edit_cache.dir
-/home/gaih/code/c++/algoCode/algoCode/CMakeFiles/rebuild_cache.dir
-/home/gaih/code/c++/algoCode/algoCode/CMakeFiles/edit_cache.dir
-/home/gaih/code/c++/algoCode/algoCode/CMakeFiles/algoCode.dir
