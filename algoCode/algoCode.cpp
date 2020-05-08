@@ -13,51 +13,51 @@ int main()
 	  int	longest = engthOfLongestSubstring(s);
 	  cout << longest << endl;
 	  */
-	  //	vector<string> strs = { "test","tes01","t" };
-	  //	string commomStr = longestCommonPrefix(strs);
-	  //	cout << commomStr << endl;
+	//	vector<string> strs = { "test","tes01","t" };
+	//	string commomStr = longestCommonPrefix(strs);
+	//	cout << commomStr << endl;
 
-	  //	vector<int> nums = { 2,3,7,0 };
-	  //	vector<int> res = twoSum(nums, 9);
-	  //	for (int i = res.size() - 1; i >= 0; i--)
-	  //	{
-	  //		cout << res[i] << endl;
-	  //	}
+	//	vector<int> nums = { 2,3,7,0 };
+	//	vector<int> res = twoSum(nums, 9);
+	//	for (int i = res.size() - 1; i >= 0; i--)
+	//	{
+	//		cout << res[i] << endl;
+	//	}
 
-	  //string s1 = "acb";
-	  //string s2 = "dcda";
+	//string s1 = "acb";
+	//string s2 = "dcda";
 
-	  //bool isExists = checkInclusion(s1, s2);
-	  //cout << boolalpha << isExists << endl;
-
-
-	  vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
-	  int sum = trap(height);
-	  cout << sum << endl;
-
-	  //string num2 = "100";
-	  //string num2 = "100";
-	  //string sum =multiply(num1, num2);
-	  //cout << sum << endl;
-
-	  //string str = "we are the    world!";
-	  //string s = reverseWords(str);
-	  //cout << s << endl;
+	//bool isExists = checkInclusion(s1, s2);
+	//cout << boolalpha << isExists << endl;
 
 
-	  //string	path = "/home/a//../";
-	  //string sPath = simplifyPath(path);
-	  //cout << sPath << endl;
+	//	  vector<int> height = { 0, 1, 0, 2, 1, 0, 1, 3,  2, 1, 2, 1 };
+	//	  int sum = trap(height);
+	//	  cout << sum << endl;
+
+	//string num2 = "100";
+	//string num2 = "100";
+	//string sum =multiply(num1, num2);
+	//cout << sum << endl;
+
+	//string str = "we are the    world!";
+	//string s = reverseWords(str);
+	//cout << s << endl;
 
 
-	  //string ipStr = "1234";
-	  //vector<string> ipList = restoreIpAddresses(ipStr);
-	  //for each (string ip in ipList)
-	  //{
-	  //	cout << ip << endl;
-	  //}
+	//string	path = "/home/a//../";
+	//string sPath = simplifyPath(path);
+	//cout << sPath << endl;
 
-	  //vector<int> nums = { -1,0,1,2,-1,-4};
+
+	//string ipStr = "1234";
+	//vector<string> ipList = restoreIpAddresses(ipStr);
+	//for each (string ip in ipList)
+	//{
+	//	cout << ip << endl;
+	//}
+
+	//vector<int> nums = { -1,0,1,2,-1,-4};
 	//vector<int> nums = { -2,0,1,1,1,1,2 };
 	//vector<vector<int>> sumList = threeSum(nums);
 	//for each (vector<int> value in sumList)
@@ -102,26 +102,26 @@ int main()
 	//string num = getPermutation(4,9);
 	//cout << num << endl;
 	//朋友圈
-//	vector<vector<int>> m = {
-//		{1,0,0,1},
-//		{0,1,1,0},
-//		{0,1,1,1},
-//		{1,0,1,1},
-//	};
-//	int num = findCircleNum(m);
-//	cout << num << endl;
+	//	vector<vector<int>> m = {
+	//		{1,0,0,1},
+	//		{0,1,1,0},
+	//		{0,1,1,1},
+	//		{1,0,1,1},
+	//	};
+	//	int num = findCircleNum(m);
+	//	cout << num << endl;
 
-//	vector<vector<int>>  m = {
-//		{1,3},
-//		{2,6},
-//		{8,10},
-//		{15,18},
-//	};
-	
-//	vector<vector<int>>  res = merge(m);
-//	for(int i = 0;i<res.size();i++){
-//		cout<<res[i][0]<<":"<<res[i][1]<<endl;
-//	}
+	//	vector<vector<int>>  m = {
+	//		{1,3},
+	//		{2,6},
+	//		{8,10},
+	//		{15,18},
+	//	};
+
+	//	vector<vector<int>>  res = merge(m);
+	//	for(int i = 0;i<res.size();i++){
+	//		cout<<res[i][0]<<":"<<res[i][1]<<endl;
+	//	}
 
 	testListNode();
 	return 0;

@@ -4,9 +4,9 @@
 
 
 void testListNode(){
-	ListNode* head1= new ListNode(0);
+	ListNode* head1= new ListNode(2);
 	ListNode* temp1 = head1;
-	vector<int> nums1 = {1,2,3,4,5};
+	vector<int> nums1 = {4,3};
 	for(int i=0;i<nums1.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums1[i];
@@ -15,20 +15,20 @@ void testListNode(){
 		temp1 = temp;
 	}
 	print(head1);
-	//	ListNode* head2= new ListNode(0);
-	//	ListNode* temp3 = head2;
-	//vector<int> nums2 = {1,2,3,4,5};
-	//for(int i=0;i<nums2.size();i++){
-	//	ListNode* temp = new ListNode(0);
-	//	temp->val = nums2[i];
-	//	temp->next= NULL;
-	//	temp3->next = temp;
-	//	temp3 = temp;
-	//}
-	//print(head2);
-	//	ListNode* l = mergeTwoList(head1,head2);
-	//	print(l);
-	reverseList(head1);
+	ListNode* head2= new ListNode(5);
+	ListNode* temp3 = head2;
+	vector<int> nums2 = {6,4};
+	for(int i=0;i<nums2.size();i++){
+		ListNode* temp = new ListNode(0);
+		temp->val = nums2[i];
+		temp->next= NULL;
+		temp3->next = temp;
+		temp3 = temp;
+	}
+	print(head2);
+	ListNode* l = addTwoNumbers(head1,head2);
+	print(l);
+	//reverseList(head1);
 }
 
 //链表排序
@@ -86,7 +86,7 @@ ListNode* reverseList1(ListNode* head){
 //链表反转 双指针
 ListNode* reverseList(ListNode* head){
 	ListNode* temp = new ListNode(0);
-	ListNode* cur = head; 
+	ListNode* cur = head;
 	ListNode* reHead = NULL;
 
 	while(cur){
@@ -96,4 +96,13 @@ ListNode* reverseList(ListNode* head){
 		cur = temp;
 	}
 	return reHead;
+}
+
+
+
+
+//两数相加
+ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+	cout<<"test"<<endl; 
+	return l1;
 }
