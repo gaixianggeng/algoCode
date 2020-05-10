@@ -6,7 +6,7 @@
 void testListNode(){
 	ListNode* head1= new ListNode(1);
 	ListNode* temp1 = head1;
-	vector<int> nums1 = {1};
+	vector<int> nums1 = {3,4,2,1};
 	for(int i=0;i<nums1.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums1[i];
@@ -15,6 +15,9 @@ void testListNode(){
 		temp1 = temp;
 	}
 	print(head1->next);
+	ListNode * sort = sortList(head1->next);
+	print(sort);
+	return;
 	ListNode* head2= new ListNode(9);
 	ListNode* temp3 = head2;
 	vector<int> nums2 = {9};
@@ -147,4 +150,9 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
 	}
 	return nSum->next;
+}
+
+ListNode* sortList(ListNode* head) {
+
+
 }
