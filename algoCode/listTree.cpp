@@ -152,7 +152,31 @@ ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 	return nSum->next;
 }
 
+//递归二分链表 之后合并两个有序链表
 ListNode* sortList(ListNode* head) {
+	if (head == NULL || head->next == NULL){
+		return head;
+	}
+	ListNode* leftNode = middleNode(head);
+	ListNode* rightNode = leftNode->next;
+	leftNode->next = NULL;
+	ListNode* left = sortList(head);
+	ListNode* right = sortList(rightNode);
 
+	return mergeTwoList(left,right);
 
+}
+
+//二分链表
+ListNode* middleNode(ListNode* head){
+	if (head == NULL || head->next == NULL){
+		return head;
+	}
+	ListNode * slow = head;
+	ListNode * fast = head->next->next;
+	while(fast!=NULL && fast->next != NULL ){
+		slow = slow->next;
+		fast = fast->next->next;
+	}
+	return slow;
 }
