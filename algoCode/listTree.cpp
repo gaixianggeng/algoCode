@@ -180,3 +180,7 @@ ListNode* middleNode(ListNode* head){
 	}
 	return slow;
 }
+//环形链表
+ListNode *detectCycle(ListNode *head) {
+
+}
