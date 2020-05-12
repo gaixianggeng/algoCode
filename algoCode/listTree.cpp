@@ -182,5 +182,27 @@ ListNode* middleNode(ListNode* head){
 }
 //环形链表
 ListNode *detectCycle(ListNode *head) {
+	ListNode* fast = head;
+	ListNode * slow = head;
+	while(true){
+		if (fast->next == NULL || fast == NULL){
+			return NULL;
+		}
+		fast = fast->next->next;
+		slow = slow->next;
+		if (slow->val == fast->val){
+			break;
+		}
+
+	}
+	fast = head;
+	while(true){
+		slow = slow->next;
+		fast = fast->next;
+		if (slow->val == slow->val){
+			break;
+		}
+	}
+	return slow;
 
 }
