@@ -210,3 +210,23 @@ ListNode *detectCycle(ListNode *head) {
 	}
 	return NULL;
 }
+//相交链表
+//画图  a长 b短的情况下 b->next = null时 b指向a 此时 ab距离为b的长度 则a==null的时候 b（此时在a上）到null的距离和原始b距离一样
+ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
+
+	ListNode* a = headA;
+	ListNode* b = headB;
+	while(a != b){
+		if (a == NULL){
+			a = headB;
+		}else{
+			a = a->next;
+		}
+		if (b == NULL){
+			b = headA;
+		}else{
+			b= b->next;
+
+		}}
+	return a;
+}
