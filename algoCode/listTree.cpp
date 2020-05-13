@@ -230,3 +230,8 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 		}}
 	return a;
 }
+
+//合并k个排序链表
+ListNode* mergeKLists(vector<ListNode*>& lists) {
+
+}

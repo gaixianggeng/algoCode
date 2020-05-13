@@ -55,5 +55,6 @@ ListNode* reverseList1(ListNode* head);
 ListNode* addTwoNumbers(ListNode*, ListNode*);
 ListNode* sortList(ListNode* );
 ListNode* middleNode(ListNode*);
-ListNode *detectCycle(ListNode *); 
-ListNode *getIntersectionNode(ListNode *, ListNode *); 
+ListNode *detectCycle(ListNode *);
+ListNode *getIntersectionNode(ListNode *, ListNode *);
+ListNode* mergeKLists(vector<ListNode*>& );
