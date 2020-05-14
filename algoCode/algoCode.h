@@ -58,3 +58,4 @@ ListNode* middleNode(ListNode*);
 ListNode *detectCycle(ListNode *);
 ListNode *getIntersectionNode(ListNode *, ListNode *);
 ListNode* mergeKLists(vector<ListNode*>& );
+ListNode* merge2Lists(ListNode*,ListNode*); 

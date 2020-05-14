@@ -6,7 +6,7 @@
 void testListNode(){
 	ListNode* head1= new ListNode(1);
 	ListNode* temp1 = head1;
-	vector<int> nums1 = {3,4,2,1};
+	vector<int> nums1 = {1,4,5,8};
 	for(int i=0;i<nums1.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums1[i];
@@ -15,12 +15,12 @@ void testListNode(){
 		temp1 = temp;
 	}
 	print(head1->next);
-	ListNode * sort = sortList(head1->next);
-	print(sort);
-	return;
-	ListNode* head2= new ListNode(9);
+	//ListNode * sort = sortList(head1->next);
+	//print(sort);
+	//return;
+	ListNode* head2= new ListNode(2);
 	ListNode* temp3 = head2;
-	vector<int> nums2 = {9};
+	vector<int> nums2 = {5,6};
 	for(int i=0;i<nums2.size();i++){
 		ListNode* temp = new ListNode(0);
 		temp->val = nums2[i];
@@ -28,9 +28,9 @@ void testListNode(){
 		temp3->next = temp;
 		temp3 = temp;
 	}
-	print(head2);
-	ListNode* l = addTwoNumbers(head1->next,head2);
-	print(l);
+	print(head2->next);
+	ListNode* head = merge2Lists(head1,head2);
+	print(head);
 	//reverseList(head1);
 }
 
@@ -233,5 +233,34 @@ ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
 
 //合并k个排序链表
 ListNode* mergeKLists(vector<ListNode*>& lists) {
+
+	if (lists.empty()){
+		return NULL;
+	}
+	if (lists.size()== 1){
+		return lists[0];
+	}
+	ListNode* head  = lists[0];
+	for(int i=1;i<=lists.size()-1;i++){
+		head = merge2Lists(head,lists[i]);
+	}
+	return head;
+
+}
+//合并两个链表
+ListNode* merge2Lists(ListNode *h1,ListNode *h2) {
+	if (h1 == NULL){
+		return h2;
+	}
+	if (h2 == NULL){
+		return h1;
+	}
+	if (h1->val < h2->val){
+		h1->next = merge2Lists(h1->next,h2);
+		return h1;
+	}else{
+		h2->next = merge2Lists(h1,h2->next);
+		return h2;
+	}
 
 }
