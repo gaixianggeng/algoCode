@@ -288,6 +288,7 @@ TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 }
 
 
+
 //二叉树前序遍历
 vector<int> preorderTraversal(TreeNode* root){ 
 	cout<<"test"<<endl;
