@@ -16,12 +16,20 @@
 using namespace std;
 // TODO: 在此处引用程序需要的其他标头。
 
+//链表定义
 struct ListNode{
 	int val;
 	ListNode *next;
 	ListNode(int x):val(x),next(NULL){}
 };
 
+//二叉树定义
+struct TreeNode{
+	int val;
+	TreeNode * left;
+	TreeNode * right;
+	TreeNode(int x):val(x),left(NULL),right(NULL){};
+};
 
 
 int trap(vector<int>&);
@@ -59,3 +67,6 @@ ListNode *detectCycle(ListNode *);
 ListNode *getIntersectionNode(ListNode *, ListNode *);
 ListNode* mergeKLists(vector<ListNode*>& );
 ListNode* merge2Lists(ListNode*,ListNode*); 
+TreeNode* lowestCommonAncestor(TreeNode* , TreeNode* , TreeNode* ); 
+vector<int> preorderTraversal(TreeNode* ); 
+void testTreeNode();

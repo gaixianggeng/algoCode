@@ -34,6 +34,25 @@ void testListNode(){
 	//reverseList(head1);
 }
 
+
+//二叉树
+void testTreeNode(){
+
+	TreeNode * treeN = new TreeNode(1);
+
+	TreeNode * tree = treeN;
+	TreeNode * temp =  new TreeNode(2);
+	tree->right = temp;
+	tree = temp;
+	temp = new TreeNode(3);
+	tree->left = temp;
+	vector<int> nums = preorderTraversal(treeN);
+	for(int i=0;i<nums.size();i++){
+		cout<<nums[i];
+	}
+	cout<<endl;
+}
+
 //链表排序
 ListNode* mergeTwoList(ListNode* l1,ListNode* l2){
 
@@ -263,4 +282,29 @@ ListNode* merge2Lists(ListNode *h1,ListNode *h2) {
 		return h2;
 	}
 
+}
+//二叉树最近公共祖先
+TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
+}
+
+
+//二叉树前序遍历
+vector<int> preorderTraversal(TreeNode* root){ 
+	cout<<"test"<<endl;
+	vector<int> nums ;
+	if (root == NULL){
+		return nums;
+
+	}
+	nums.push_back(root->val);
+	vector<int> nums1 = (preorderTraversal(root->left));
+	vector<int> nums2 = (preorderTraversal(root->right));
+	if (nums1.size() > 0){
+		nums.insert(nums.end(),nums1.begin(),nums1.end());
+
+	}
+	if (nums2.size() > 0){
+		nums.insert(nums.end(),nums2.begin(),nums2.end());
+	}
+	return nums;
 }
