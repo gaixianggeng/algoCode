@@ -10,6 +10,7 @@
 #include <cstring>
 #include <algorithm>
 #include <stack>
+#include <queue>
 
 #include <cstddef>
 
@@ -70,3 +71,5 @@ ListNode* merge2Lists(ListNode*,ListNode*);
 TreeNode* lowestCommonAncestor(TreeNode* , TreeNode* , TreeNode* ); 
 vector<int> preorderTraversal(TreeNode* ); 
 void testTreeNode();
+vector<vector<int>> zigzagLevelOrderBFS(TreeNode* );
+vector<vector<int>> zigzagLevelOrderDFS(TreeNode *);
