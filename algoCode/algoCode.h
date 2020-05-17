@@ -74,3 +74,4 @@ vector<vector<int>> zigzagLevelOrderBFS(TreeNode* );
 vector<vector<int>> zigzagLevelOrderDFS(TreeNode *);
 int maxProfit(vector<int>& ) ;
 void testDynamic();
+int maxProfit2(vector<int>& prices) ;
