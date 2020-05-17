@@ -76,3 +76,4 @@ int maxProfit(vector<int>& ) ;
 void testDynamic();
 int maxProfit2(vector<int>& ) ;
 int maximalSquare(vector<vector<char>>& ) ;
+int maxSubArray(vector<int>& ) ;
