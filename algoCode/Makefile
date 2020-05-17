@@ -179,6 +179,33 @@ arraySort.cpp.s:
 	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.s
 .PHONY : arraySort.cpp.s
 
+dynamic.o: dynamic.cpp.o
+
+.PHONY : dynamic.o
+
+# target to build an object file
+dynamic.cpp.o:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dynamic.cpp.o
+.PHONY : dynamic.cpp.o
+
+dynamic.i: dynamic.cpp.i
+
+.PHONY : dynamic.i
+
+# target to preprocess a source file
+dynamic.cpp.i:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dynamic.cpp.i
+.PHONY : dynamic.cpp.i
+
+dynamic.s: dynamic.cpp.s
+
+.PHONY : dynamic.s
+
+# target to generate assembly for a file
+dynamic.cpp.s:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dynamic.cpp.s
+.PHONY : dynamic.cpp.s
+
 listTree.o: listTree.cpp.o
 
 .PHONY : listTree.o
@@ -275,6 +302,9 @@ help:
 	@echo "... arraySort.o"
 	@echo "... arraySort.i"
 	@echo "... arraySort.s"
+	@echo "... dynamic.o"
+	@echo "... dynamic.i"
+	@echo "... dynamic.s"
 	@echo "... listTree.o"
 	@echo "... listTree.i"
 	@echo "... listTree.s"

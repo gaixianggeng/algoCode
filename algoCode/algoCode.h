@@ -11,7 +11,6 @@
 #include <algorithm>
 #include <stack>
 #include <queue>
-
 #include <cstddef>
 
 using namespace std;
@@ -73,3 +72,5 @@ vector<int> preorderTraversal(TreeNode* );
 void testTreeNode();
 vector<vector<int>> zigzagLevelOrderBFS(TreeNode* );
 vector<vector<int>> zigzagLevelOrderDFS(TreeNode *);
+int maxProfit(vector<int>& ) ;
+void testDynamic();

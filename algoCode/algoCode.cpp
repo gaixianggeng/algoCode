@@ -123,7 +123,8 @@ int main()
 	//		cout<<res[i][0]<<":"<<res[i][1]<<endl;
 	//	}
 
-	testTreeNode();	
+//	testTreeNode();	
+	testDynamic();
 	return 0;
 
 }
