@@ -86,7 +86,7 @@ int maxSubArray(vector<int>& nums) {
 }
 
 //三角形最小路径和
-//倒排  每次最小的数组和上一排进行累加 
+//倒排  每次最小的数组和上一排进行累加
 int minimumTotal(vector<vector<int>>& triangle) {
 	if (triangle.size()==0){
 		return 0;
@@ -103,4 +103,53 @@ void twoLinePlus(vector<vector<int>> &triangle ,int length){
 	for(int i=0;i<triangle[length-1].size();i++){
 		triangle[length-1][i] += triangle[length][i]>triangle[length][i+1]?triangle[length][i+1]:triangle[length][i];
 	}
+}
+//俄罗斯套娃信封问题
+int maxEnvelopes(vector<vector<int>>& envelopes) {
+
+	if (envelopes.size() == 0){
+		return  0;
+	}
+	vector<int> small;
+	vector<int> big;
+	int sum = 1;
+	small = envelopes[0];
+	big = envelopes[0];
+	for(int i=1;i<envelopes.size();i++){
+		vector<int> c = envelopes[i];
+		if (c[0]<small[0] && c[1]<small[1]){
+			small = c;
+			sum++
+		}
+		if (c[0]>big[0] && c[1]>big[1]){
+			big = c;
+			sum++
+		}
+	}
+	return sum;
+
+}
+//最长上升子序列
+//动态规划
+int lengthOfLIS(vector<int>& nums) {
+
+	if (nums.size()==0){
+		return 0;
+	}
+	int size = nums.size()-1;
+	int* dp = new int[size+1];
+	for(int n=0;n<=size;n++){
+		dp[n] = 1;
+		for(int m=0;m<n;m++){
+			if (nums[n]>nums[m]){
+				dp[n] = max(dp[n],dp[m]+1);
+			}
+		}
+	}
+	int num = 1;
+	for(int i=0;i<=size;i++){
+		num = max(dp[i],num);
+
+	}
+	return num;
 }
