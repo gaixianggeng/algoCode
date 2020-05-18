@@ -129,7 +129,7 @@ int maxEnvelopes(vector<vector<int>>& envelopes) {
 	return sum;
 
 }
-//最长上升子序列
+//300最长上升子序列
 //动态规划
 int lengthOfLIS(vector<int>& nums) {
 
