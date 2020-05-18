@@ -84,3 +84,23 @@ int maxSubArray(vector<int>& nums) {
 	}
 	return sum;
 }
+
+//三角形最小路径和
+//倒排  每次最小的数组和上一排进行累加 
+int minimumTotal(vector<vector<int>>& triangle) {
+	if (triangle.size()==0){
+		return 0;
+
+	}
+	int length = triangle.size()-1;
+	for(int i = length;i>0;i--){
+		twoLinePlus(triangle,i);
+	}
+	return triangle[0][0];
+}
+
+void twoLinePlus(vector<vector<int>> &triangle ,int length){
+	for(int i=0;i<triangle[length-1].size();i++){
+		triangle[length-1][i] += triangle[length][i]>triangle[length][i+1]?triangle[length][i+1]:triangle[length][i];
+	}
+}
