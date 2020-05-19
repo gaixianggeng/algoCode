@@ -1,5 +1,5 @@
 #include "algoCode.h"
-
+#include <algorithm>
 
 //动态 贪心
 
@@ -8,9 +8,17 @@
 //
 
 void testDynamic(){
-	vector<int> nums = {7,1,5,3,6,4};
-	int max = maxProfit2(nums);
-	cout<<max<<endl;
+	vector<vector<int>> nums ={
+		{7,14},
+		{5,10},
+		{3,5},
+		{3,6},
+		{1,2},
+		{3,4},
+	};
+	//int max = maxProfit2(nums);
+	//cout<<max<<endl;
+	maxEnvelopes(nums);
 }
 
 
@@ -110,26 +118,21 @@ int maxEnvelopes(vector<vector<int>>& envelopes) {
 	if (envelopes.size() == 0){
 		return  0;
 	}
-	vector<int> small;
-	vector<int> big;
 	int sum = 1;
-	small = envelopes[0];
-	big = envelopes[0];
-	for(int i=1;i<envelopes.size();i++){
-		vector<int> c = envelopes[i];
-		if (c[0]<small[0] && c[1]<small[1]){
-			small = c;
-			sum++
-		}
-		if (c[0]>big[0] && c[1]>big[1]){
-			big = c;
-			sum++
-		}
+	sort(envelopes.begin(),envelopes.end(),[](vector<int>&a,vector<int>&b){
+			if (a[0] != b[0]) return a[0] < b[0];
+			if (a[1] != b[1]) return a[1] > b[1];
+			return true;
+			}
+	    );
+	vector<int> tempNums;
+	for (int i=0; i<envelopes.size(); i++) {
+		tempNums.push_back(envelopes[i][1]);
 	}
+	sum = lengthOfLIS(tempNums);
 	return sum;
-
 }
-//300最长上升子序列
+//最长上升子序列
 //动态规划
 int lengthOfLIS(vector<int>& nums) {
 
@@ -149,7 +152,6 @@ int lengthOfLIS(vector<int>& nums) {
 	int num = 1;
 	for(int i=0;i<=size;i++){
 		num = max(dp[i],num);
-
 	}
 	return num;
 }

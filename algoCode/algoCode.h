@@ -12,7 +12,7 @@
 #include <stack>
 #include <queue>
 #include <cstddef>
-
+#include <algorithm>
 using namespace std;
 // TODO: 在此处引用程序需要的其他标头。
 
@@ -77,3 +77,10 @@ void testDynamic();
 int maxProfit2(vector<int>& ) ;
 int maximalSquare(vector<vector<char>>& ) ;
 int maxSubArray(vector<int>& ) ;
+void printVec(vector<vector<int>>);
+int maxEnvelopes(vector<vector<int>>&);
+int lengthOfLIS(vector<int>& ) ;
+bool cmp (vector<int>,vector<int> );
+void twoLinePlus(vector<vector<int>> &,int );
+int minimumTotal(vector<vector<int>>& ) ;
+int maxProfit2(vector<int>& ) ;
