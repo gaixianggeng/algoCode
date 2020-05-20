@@ -1,4 +1,5 @@
 ﻿#include "algoCode.h"
+//并查集
 class UF
 {
 public:
