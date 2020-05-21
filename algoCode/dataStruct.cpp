@@ -53,7 +53,7 @@ class LRUCache {
 			cache.erase(map[key]);
 			cache.push_front(temp);
 			//这一步不能省略 相当于map存储的对应的地址
-			// cache不能直接获取数据 
+			// cache不能直接获取数据
 			map[key] = cache.begin();
 			return temp.second;
 		}
@@ -85,4 +85,41 @@ class LRUCache {
 		list<pair<int, int>> cache;
 		//哈希表：key 映射到cache中
 		unordered_map<int,list<pair<int,int>>::iterator> map;
+};
+
+
+//全O(1)的数据结构
+//暂时搁置...
+class AllOne {
+	public:
+		/** Initialize your data structure here. */
+		AllOne() {
+
+
+		}
+
+		/** Inserts a new key <Key> with value 1. Or increments an existing key by 1. */
+		void inc(string key) {
+
+
+		}
+
+		/** Decrements an existing key by 1. If Key's value is 1, remove it from the data structure. */
+		void dec(string key) {
+
+
+		}
+
+		/** Returns one of the keys with maximal value. */
+		string getMaxKey() {
+
+
+		}
+
+		/** Returns one of the keys with Minimal value. */
+		string getMinKey() {
+
+
+		}
+
 };
