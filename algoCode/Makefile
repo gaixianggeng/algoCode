@@ -179,6 +179,33 @@ arraySort.cpp.s:
 	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/arraySort.cpp.s
 .PHONY : arraySort.cpp.s
 
+dataStruct.o: dataStruct.cpp.o
+
+.PHONY : dataStruct.o
+
+# target to build an object file
+dataStruct.cpp.o:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dataStruct.cpp.o
+.PHONY : dataStruct.cpp.o
+
+dataStruct.i: dataStruct.cpp.i
+
+.PHONY : dataStruct.i
+
+# target to preprocess a source file
+dataStruct.cpp.i:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dataStruct.cpp.i
+.PHONY : dataStruct.cpp.i
+
+dataStruct.s: dataStruct.cpp.s
+
+.PHONY : dataStruct.s
+
+# target to generate assembly for a file
+dataStruct.cpp.s:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dataStruct.cpp.s
+.PHONY : dataStruct.cpp.s
+
 dynamic.o: dynamic.cpp.o
 
 .PHONY : dynamic.o
@@ -205,6 +232,33 @@ dynamic.s: dynamic.cpp.s
 dynamic.cpp.s:
 	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/dynamic.cpp.s
 .PHONY : dynamic.cpp.s
+
+extend.o: extend.cpp.o
+
+.PHONY : extend.o
+
+# target to build an object file
+extend.cpp.o:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/extend.cpp.o
+.PHONY : extend.cpp.o
+
+extend.i: extend.cpp.i
+
+.PHONY : extend.i
+
+# target to preprocess a source file
+extend.cpp.i:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/extend.cpp.i
+.PHONY : extend.cpp.i
+
+extend.s: extend.cpp.s
+
+.PHONY : extend.s
+
+# target to generate assembly for a file
+extend.cpp.s:
+	cd /home/gaih/code/c++/algoCode && $(MAKE) -f algoCode/CMakeFiles/algoCode.dir/build.make algoCode/CMakeFiles/algoCode.dir/extend.cpp.s
+.PHONY : extend.cpp.s
 
 listTree.o: listTree.cpp.o
 
@@ -302,9 +356,15 @@ help:
 	@echo "... arraySort.o"
 	@echo "... arraySort.i"
 	@echo "... arraySort.s"
+	@echo "... dataStruct.o"
+	@echo "... dataStruct.i"
+	@echo "... dataStruct.s"
 	@echo "... dynamic.o"
 	@echo "... dynamic.i"
 	@echo "... dynamic.s"
+	@echo "... extend.o"
+	@echo "... extend.i"
+	@echo "... extend.s"
 	@echo "... listTree.o"
 	@echo "... listTree.i"
 	@echo "... listTree.s"

@@ -124,7 +124,9 @@ int main()
 	//	}
 
 //	testTreeNode();	
-	testDynamic();
+//	testDynamic();
+	int r = mySqrt(2147483647);
+	cout<<r<<endl;
 	return 0;
 
 }

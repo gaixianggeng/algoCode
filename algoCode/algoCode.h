@@ -85,3 +85,4 @@ bool cmp (vector<int>,vector<int> );
 void twoLinePlus(vector<vector<int>> &,int );
 int minimumTotal(vector<vector<int>>& ) ;
 int maxProfit2(vector<int>& ) ;
+int mySqrt(int ) ;
