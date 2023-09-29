@@ -1,6 +1,12 @@
 #include <cstdlib>
+#include <iostream>
 
-int main() { return 0; }
+using namespace std;
+
+int main() {
+  cout << "Hello, World!" << endl;
+  return 0;
+}
 
 int fibon_elem(int pos) {
   if (pos <= 0 || pos > 1024) {
