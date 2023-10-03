@@ -7,7 +7,7 @@ int main() {
 
   const int *p = find(vec, value);
   cout << *p << endl;
-  cout << *findTemp(vec, value) << endl;
+  cout << *findTemp(arr, arr + 5, value) << endl;
   return 0;
 }
 
@@ -21,10 +21,14 @@ const int *find(const vector<int> &vec, int value) {
 }
 
 template <typename elemType>
-const elemType *findTemp(const vector<elemType> &vec, const elemType &value) {
-  for (int ix = 0; ix < vec.size(); ++ix) {
-    if (vec[ix] == value) {
-      return &vec[ix];
+const elemType *findTemp(const elemType *first, const elemType *last,
+                         const elemType &value) {
+  if (!first || !last) {
+    return 0;
+  }
+  for (; first != last; ++first) {
+    if (*first == value) {
+      return first;
     }
   }
   return 0;
