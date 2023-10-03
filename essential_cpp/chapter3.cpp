@@ -1,14 +1,29 @@
 #include "chapter.h"
+#include <algorithm>
+#include <cmath>
+#include <iterator>
+#include <ostream>
+#include <type_traits>
+#include <vector>
 
 int main() {
-  int arr[] = {1, 2, 3, 4, 5};
-  vector<int> const vec(arr, arr + 5);
-  int value = 3;
+  istream_iterator<string> is(cin);
+  // 输入 enter
+  istream_iterator<string> eof;
+  vector<string> text;
+  copy(is, eof, back_inserter(text));
+  sort(text.begin(), text.end());
+  ostream_iterator<string> os(cout, " ");
+  copy(text.begin(), text.end(), os);
 
-  const int *p = find(vec, value);
-  cout << *p << endl;
-  cout << *findTemp(arr, arr + 5, value) << endl;
-  return 0;
+  // int arr[] = {1, 2, 3, 4, 5};
+  // vector<int> const vec(arr, arr + 5);
+  // int value = 3;
+
+  // const int *p = find(vec, value);
+  // cout << *p << endl;
+  // cout << *findTemp(arr, arr + 5, value) << endl;
+  // return 0;
 }
 
 const int *find(const vector<int> &vec, int value) {
